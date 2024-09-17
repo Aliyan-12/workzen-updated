@@ -1,0 +1,1243 @@
+/*** Spinner Start ***/
+
+#spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .8s ease-out, visibility 0s linear .5s;
+    z-index: 99999;
+ }
+
+ #spinner.show {
+     transition: opacity .8s ease-out, visibility 0s linear .0s;
+     visibility: visible;
+     opacity: 1;
+ }
+
+/*** Spinner End ***/
+
+
+/*** Button Start ***/
+.btn {
+    font-weight: 600;
+    transition: .5s;
+}
+
+.btn-square {
+    width: 38px;
+    height: 38px;
+}
+
+.btn-sm-square {
+    width: 32px;
+    height: 32px;
+}
+
+.btn-md-square {
+    width: 46px;
+    height: 46px;
+}
+
+.btn-lg-square {
+    width: 58px;
+    height: 58px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-md-square,
+.btn-lg-square {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+}
+
+.back-to-top {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    right: 30px;
+    bottom: 30px;
+    z-index: 99;
+}
+
+/*** Button End ***/
+
+
+/*** Topbar Start ***/
+.top-changed{
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    padding-bottom: 5px;
+
+}
+.topbar {
+    position: relative; /* Ensure the topbar's z-index applies correctly */
+    z-index: 10; /* Ensure the topbar is above other content */
+    background-color: #333; /* Dark background for a professional look */
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.topbar .top-info {
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #f1f1f1; /* Light text for contrast */
+}
+
+.topbar .top-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 50px;
+}
+
+.topbar .top-link a {
+    margin-right: 10px;
+}
+
+.top-info {
+    padding-left: 100px;
+    gap: 15px; /* Increased gap for better spacing */
+}
+
+/*** Topbar End ***/
+
+
+/*** Navbar Start ***/
+.nav-changed{
+    margin-top: 20px;
+    z-index: 5;
+    position: fixed;
+}
+.navbar.scrolled {
+    
+    background: #333;
+    
+} 
+.book-meeting{
+    color: white;
+    border-radius: 10px;
+    }
+.book-meeting:hover{
+    color: #fb731c;
+}
+.navbar{
+    background: transparent;
+    position: absolute;
+    z-index: 2;
+    align-items: center;
+      
+    max-width: 100vw; 
+    left: 0;
+    right: 0;
+ 
+    padding-left: 50px;
+    padding-right: 15px;
+    z-index: 2;
+    box-sizing: border-box;
+    margin-top: 15px;
+}
+.top-lgo img{
+    width: 151px;
+  }
+  
+.navbar .navbar-nav {
+    padding: 15px 0;
+}
+
+.navbar .navbar-nav .nav-link {
+    padding: 10px;
+    color: white;
+    font-size: 18px;
+    outline: none;
+    
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active {
+    color: var(--bs-secondary) !important;
+}
+
+.navbar .dropdown-toggle::after {
+    border: none;
+    content: "\f107";
+    font-family: "font awesome 5 free";
+    font-weight: 900;
+    vertical-align: middle;
+    margin-left: 8px;
+}
+
+@media (min-width: 992px) {
+    .navbar .nav-item .dropdown-menu {
+        display: block;
+   
+        visibility: hidden;
+        top: 100%;
+        transform: rotateX(-75deg);
+        transform-origin: 0% 0%;
+        transition: .5s;
+        opacity: 0;
+    }
+    
+}
+
+.navbar .nav-item:hover .dropdown-menu {
+    transform: rotateX(0deg);
+    visibility: visible;
+    transition: .5s;
+    opacity: 1;
+
+}
+
+
+/*** Navbar End ***/
+
+
+/*** popup start ***/
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    width: 80%;
+    max-width: 800px;
+    height: 80%;
+    max-height: 600px;
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+    background: white;
+    transform: translateY(-100%); /* Start from above the screen */
+    transition: transform 0.6s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.popup-content:hover {
+    box-shadow: 0 0 20px 5px orange;
+}
+
+.popup-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.popup-text input[type="email"], 
+.popup-text input[type="text"] {
+    width: 100%;
+    padding: 10px 5px;
+    margin-bottom: 15px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    background: transparent;
+    outline: none;
+    font-size: 16px;
+    color: #333;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.popup-text input[type="email"]:focus, 
+.popup-text input[type="text"]:focus {
+    border-bottom: 2px solid #f77f00; /* Change color on focus */
+}
+
+.benefits-list {
+    list-style-type: disc; /* Use bullet points */
+    padding-left: 20px; /* Space between bullet points and text */
+    margin-top: 20px; /* Space above the list */
+    margin-bottom: 20px; /* Space below the list */
+}
+
+.benefits-list li {
+    margin-bottom: 10px; /* Space between bullet points */
+    font-size: 16px; /* Adjust font size as needed */
+    
+}
+.popup-text input[type="email"]::placeholder, 
+.popup-text input[type="text"]::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+/* Fancy underline effect */
+.popup-text input[type="email"], 
+.popup-text input[type="text"] {
+    position: relative;
+}
+
+.popup-text input[type="email"]:after, 
+.popup-text input[type="text"]:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    height: 2px;
+    width: 0;
+    background-color: #f77f00;
+    transition: width 0.3s ease-in-out;
+}
+
+.popup-text input[type="email"]:focus:after, 
+.popup-text input[type="text"]:focus:after {
+    width: 100%; /* Underline extends fully on focus */
+}
+
+.popup-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px 0 0 10px;
+}
+
+.popup-text {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fb731c;
+}
+
+.popup-text h1 {
+    color: #fb731c;
+    margin-top: 0;
+    font-size: 2em;
+    margin-bottom: 25px;
+}
+
+.popup-text p {
+    font-size: 1em;
+    margin-bottom: 30px;
+}
+
+
+
+
+.subscribe-btn {
+    text-align: center;
+    background-color: #fb731c;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+.subscribe-btn:hover {
+    background-color: rgb(168, 73, 0);
+}
+
+#closePopup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 50%;
+    background: transparent;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    transition: background 0.3s ease-in-out;
+}
+
+#closePopup:hover {
+    background: orange;
+}
+
+#closePopup i {
+    font-size: 1.2em;
+}
+
+/* Popup Animation */
+@keyframes dropIn {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.popup.show .popup-content {
+    animation: dropIn 0.6s ease-in-out forwards;
+}
+
+
+/* Style for the popup container */
+.popup {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+/* Show popup when the 'show' class is added */
+.popup.show {
+    display: flex;
+}
+
+/* Media query to hide the popup on smaller screens */
+@media (max-width: 768px) {
+    .popup {
+        display: none !important; /* Ensure it's hidden on smaller screens */
+    }
+}
+
+/* Mobile popup styles */
+.mobile-popup {
+    display: none; /* Hide by default */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    padding: 15px;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mobile-popup-text {
+    text-align: left;
+   
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.mobile-popup p {
+    font-size: 1rem; /* Adjusted font size */
+    margin: 0;
+    color: white;
+}
+
+.mobile-subscribe-btn {
+    background-color: #fb731c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.mobile-close-btn {
+    background: none;
+    border: none;
+    font-size: 1.2rem; /* Adjusted font size */
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 1100; /* Ensure it's on top */
+}
+
+/* Hide mobile popup on larger screens */
+@media (min-width: 769px) {
+    .mobile-popup {
+        display: none !important; /* Ensure it's not shown on larger screens */
+    }
+}
+
+
+
+/*** popup End ***/
+
+
+/*** Carousel Start ***/
+@keyframes zoomInEffect {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+.carousel-item:first-child img {
+    animation: zoomInEffect 8s ease-in-out forwards;
+   
+    
+}
+
+.changed {
+    height: 100vh;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    transition: transform 8s ease-in-out; /* Smooth zoom effect */
+    transform: scale(1);
+    transform-origin: center center;
+}
+
+.carousel-item.active img {
+    transition: transform 8s ease-in-out;
+    transform: scale(1.1);
+}
+
+.carousel-item {
+    transition: transform 1s ease-in-out; /* Smooth transition */
+    overflow: hidden;
+    position: relative;
+    height: 100vh;
+}
+
+.carousel-item::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .4);
+}
+
+.carousel-content {
+    padding-top: 80px;
+}
+
+.carousel-content h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 3rem;
+}
+
+.carousel-caption {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.carousel-item p {
+    max-width: 700px;
+    margin: 0 auto 35px auto;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 90px;
+    height: 60px;
+    position: absolute;
+    top: 50%;
+    background: transparent;
+    opacity: 1;
+    border-radius: 50px;
+}
+
+.carousel-control-prev {
+    left: 0;
+    border-radius: 0 50px 50px 0;
+}
+
+.carousel-control-next {
+    right: 0;
+    border-radius: 50px 0 0 50px;
+}
+
+.carousel-control-next:hover {
+    transition: .8s;
+}
+
+.carousel-caption .carousel-content a button.carousel-content-btn1,
+.carousel-caption .carousel-content a button.carousel-content-btn2 {
+    opacity: 1;
+    border: 0;
+    border-radius: 20px;
+    transition: 1s;
+}
+
+.carousel-caption .carousel-content a button.carousel-content-btn1 {
+    background: var(--bs-secondary);
+    color: var(--bs-dark);
+}
+
+.carousel-caption .carousel-content a button.carousel-content-btn1:hover {
+    background: var(--bs-primary);
+    color: #ffffff;
+}
+
+.carousel-caption .carousel-content a button.carousel-content-btn2 {
+    background: var(--bs-primary);
+    color: var(--bs-white);
+}
+
+.carousel-caption .carousel-content a button.carousel-content-btn2:hover {
+    background: var(--bs-secondary);
+    color: var(--bs-dark);
+}
+
+@media (max-width: 992px), (max-width: 768px) {
+    .carousel-item,
+    .carousel-item img {
+        height: 100vh;
+        object-fit: cover;
+    }
+
+    .carousel-item h1 {
+        font-size: 28px !important;
+    }
+
+    .carousel-item p {
+        font-size: 14px !important;
+    }
+}
+
+.page-header {
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../img/carousel-1.jpeg) center center no-repeat;
+    background-size: cover;
+}
+
+.page-header .breadcrumb-item+.breadcrumb-item::before {
+    color: var(--bs-white);
+}
+
+.page-header .breadcrumb-item,
+.page-header .breadcrumb-item a {
+    font-size: 18px;
+    color: var(--bs-white);
+}
+
+/*** Carousel End ***/
+
+
+/*** client start ***/
+#clients-section {
+    padding: 40px 0;
+    background: #fff;
+}
+
+.clients-info {
+    display: flex;
+    align-items: center;
+}
+
+.clients-info .orange-line {
+    width: 40px;
+    height: 2px;
+    background-color: #f97300;
+    margin-right: 10px;
+}
+
+.clients-info h4 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
+
+.clients-logos {
+    overflow: hidden; /* Hide overflow to ensure the scrolling appears seamless */
+    position: relative;
+    width: 100%;
+}
+
+.logo-wrapper {
+    display: flex;
+    flex-wrap: nowrap; /* Ensure logos stay in a single line */
+    width: 200%; /* Adjust width to accommodate all logos */
+    animation: scroll 30s linear infinite; /* Continuous scrolling effect */
+}
+
+.clients-logos img {
+    max-width: 150px;
+    margin: 0 20px;
+    transition: transform 0.3s ease-in-out;
+    padding: 10px;
+    border-radius: 8px;
+    filter: none;
+    background-color: #fff;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-250%); /* Move the full width of the container */
+    }
+}
+
+
+/*** client end ***/
+
+
+/*** Services Start ***/
+
+.srv-container1 {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 20px;
+	padding: 20px;
+}
+.srv-container2 {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 20px;
+	padding: 20px;
+}
+.section-header {
+	text-align: center;
+	margin-top: 5%;
+	color: #fff;
+}
+.section-header h2 {
+	font-family: "Bebas Neue", sans-serif;
+	font-size: 45px;
+	margin: 0;
+}
+
+.srv-box {
+	position: relative;
+	height: 350px;
+	background: linear-gradient(45deg, #ffa36a, #ff6e14);
+	box-sizing: border-box;
+	padding: 30px;
+	transition: .5s;
+	overflow: hidden;
+	margin: 20px;
+	text-align: center;
+	border-radius: 10px;
+	transition: all 0.6s ease;
+}
+
+    .srv-box p {
+        color: #fff;
+        font-size: 16px;
+        padding-bottom: 15px;
+    }
+	
+.srv-box h3 {
+	font-size: 25px;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+.icons {
+	width: 80px;
+	height: 80px;
+	background: #fff;
+	margin: auto;
+	border-radius: 50px;
+}
+.icons i {
+	font-size: 35px;
+	line-height: 80px;
+}
+.srv-box:before, .box:after {
+	content: '';
+	position: absolute;
+	width: 0%;
+	height: 0%;
+	border: 5px solid #fff;
+	opacity: 0;
+	transition: .5s;
+	box-sizing: border-box;
+}
+.srv-box:before {
+	top: 0;
+	left: 0;
+	border-top-left-radius: 10px;
+}
+.srv-box:after {
+	bottom: 0;
+	right: 0;
+	border-bottom-right-radius: 10px;
+}
+.srv-box:hover:before, .box:hover:after {
+	width: 100%;
+	height: 100%;
+	opacity: 1;
+	transition-delay: .3s;
+}
+.srv-box:hover {
+	box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+}
+
+.srv-box span {
+	position: absolute;
+	top: 0;
+	left: -110%;
+	width: 100%;
+	height: 100%;
+	background: rgba(255, 255, 255, 0.3);
+	transition: .5s;
+	transform: skewX(10deg);
+}
+.srv-box:hover span {
+	left: 110%;
+}
+.srv-box:hover {
+	background-image: linear-gradient(45deg, #ff6e14, #ffa36a);
+	box-shadow: 0 2px 15px 5px rgba(0, 0, 0, 0.5);
+}
+@media (max-width: 1000px) {
+	.srv-box {
+		padding: 25px;
+	}
+}
+@media (max-width: 600px) {
+	.srv-box {
+		height: 320px;
+		margin: 0;
+	}
+	.srv-box h3 {
+		font-size: 20px;
+	}
+}
+
+
+/*** Services End ***/
+
+
+
+
+/*** Team Start ***/
+.team-set {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Ensures items are vertically centered */
+   margin-bottom: 50px;
+  
+  
+  
+   
+}
+
+
+.t-card img {
+    height: 100%;
+    width: 300px;
+  
+    transition: transform 0.4s ease, box-shadow 0.4s ease; 
+}
+
+.t-card img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+@media (max-width: 992px) {
+    .t-card {
+        flex: 1 1 45%; /* Two items per row on medium screens */
+        margin: 0 15px; /* Adjust spacing between cards */
+    }
+}
+
+@media (max-width: 768px) {
+    .t-card {
+        flex: 1 1 100%; /* Single item per row on small screens */
+        margin: 0 20px; /* Adjust spacing between cards */
+    }
+
+    .team-set {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: center; /* Center items horizontally when stacked */
+    }
+
+    .t-card {
+        margin-bottom: 20px; /* Space between stacked cards */
+    }
+}
+
+@media (max-width: 576px) {
+    .team-set {
+        margin-bottom: 30px; /* Reduced margin on very small screens */
+    }
+}
+/*** Team End ***/
+
+
+/*** Testimonial Start ***/
+
+/* Testimonial Item Styling */
+.testimonial-item {
+    background: #ffffff; /* Clean white background */
+    border-radius: 15px; /* Rounded corners */
+ 
+    padding: 40px; /* Generous padding */
+    transition: background 0.5s, box-shadow 0.5s, transform 0.5s; /* Smooth transitions */
+    margin: 0 20px; /* Space between items */
+}
+
+/* Hover Effect for Testimonial Items */
+.testimonial-item:hover {
+    background: #f9f9f9; /* Subtle background change on hover */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3); /* More pronounced shadow on hover */
+    transform: translateY(-5px); /* Slight lift effect on hover */
+    overflow: visible; /* Ensure overflow is visible on hover */
+}
+.testimonial-carousel{
+    gap: 25px;
+}
+/* Testimonial Carousel Dots */
+.testimonial-carousel .owl-dots {
+    margin-top: 30px; /* Space above the dots */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Individual Dot Styling */
+.testimonial-carousel .owl-dot {
+    position: relative;
+    display: inline-block;
+    margin: 0 10px; /* Space between dots */
+    width: 12px; /* Default dot size */
+    height: 12px;
+    background: #e98441; /* Orange background for default state */
+    border-radius: 50%; /* Round dots */
+    transition: width 0.5s, background 0.5s, box-shadow 0.5s; /* Smooth transition */
+    /* Light shadow for default state */
+}
+
+/* Active Dot Styling */
+.testimonial-carousel .owl-dot.active {
+    width: 24px; /* Larger size for active dot */
+    background: #f7b731; /* Bright yellow for active dot */
+    transform: scale(1.2); /* Slightly enlarge active dot */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Deeper shadow for active dot */
+}
+
+/* Centered Item Styling */
+.testimonial-carousel .owl-item.center {
+    position: relative;
+    z-index: 2; /* Ensure centered item is on top */
+}
+
+/* Styling for Centered Item */
+.testimonial-carousel .owl-item.center .testimonial-item {
+    background: #ffffff; /* White background */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25); /* Enhanced shadow */
+    transform: scale(1.1); /* Larger scale for centered item */
+    transition: transform 0.5s, box-shadow 0.5s, background 0.5s; /* Smooth transitions */
+}
+
+/* Additional Hover Effect for Centered Item */
+.testimonial-carousel .owl-item.center .testimonial-item:hover {
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
+    transform: scale(1.15); /* Larger scale on hover */
+    background: #f1f1f1; /* Subtle background change on hover */
+}
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .testimonial-item {
+        padding: 30px; /* Reduced padding for medium screens */
+        margin: 0 15px; /* Reduced space between items */
+    }
+
+    .testimonial-carousel {
+        gap: 20px; /* Reduced gap between items */
+    }
+
+    .testimonial-carousel .owl-dots {
+        margin-top: 20px; /* Reduced space above dots */
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonial-item {
+        padding: 20px; /* Further reduced padding for small screens */
+        margin: 0 10px; /* Further reduced space between items */
+    }
+
+    .testimonial-carousel {
+        gap: 15px; /* Further reduced gap between items */
+    }
+
+    .testimonial-carousel .owl-dots {
+        margin-top: 15px; /* Further reduced space above dots */
+    }
+}
+
+@media (max-width: 576px) {
+    .testimonial-item {
+        padding: 15px; /* Minimal padding for very small screens */
+        margin: 0 5px; /* Minimal space between items */
+    }
+
+    .testimonial-carousel {
+        gap: 10px; /* Minimal gap between items */
+    }
+
+    .testimonial-carousel .owl-dots {
+        margin-top: 10px; /* Minimal space above dots */
+    }
+}
+
+/*** Testimonial End ***/
+
+
+/*** Contact Start ***/
+.contact .contact-add-item {
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: var(--bs-light);
+}
+
+.contact .contact-add-item .contact-icon {
+    width: 90px; 
+    height: 90px; 
+    border-radius: 67% 33% 29% 71% / 39% 46% 54% 61%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--bs-secondary);
+    background: var(--bs-primary);
+    animation-name: icon-animat;
+    animation-duration: 5s;
+    animation-delay: 1s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    transition: 0.5s;
+}
+
+/*** Contact End ***/
+
+
+/*** Footer Start ***/
+
+.footer .short-link a,
+.footer .help-link a,
+.footer .contact-link a {
+    transition: .5s;
+}
+
+.footer .short-link a:hover,
+.footer .help-link a:hover,
+.footer .contact-link a:hover {
+    letter-spacing: 1px;
+}
+
+.footer .hightech-link a:hover {
+    background: var(--bs-secondary);
+    border: 0;
+}
+.logo-bottom img { 
+    width: 149px;
+    
+}
+/*** Footer End ***/
+/*** industry start  ***/
+
+.content-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+   
+  
+    border-radius: 8px;
+}
+
+header {
+    text-align: center;
+    padding: 20px 0;
+    animation: fadeIn 3s forwards;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #fb731c;
+    margin: 0;
+}
+
+.industry {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    animation: popIn 3s forwards;
+}
+
+.text-left {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.text-left h2 {
+    font-size: 2em;
+    color: #fb731c;
+    margin-bottom: 10px;
+}
+
+.text-left p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #333;
+}
+
+.image-right {
+    flex: 1;
+    text-align: right;
+}
+
+.image-right img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .industry {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text-left, .image-right {
+        padding: 0;
+        text-align: center;
+    }
+
+    .image-right img {
+        margin-top: 20px;
+    }
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Pop-in Animation */
+@keyframes popIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+/*** industry end  ***/
+
+/*** demo start ***/
+
+.calendly-inline-widget {
+    width: 100%; /* Make sure the widget is responsive */
+    height: 700px; /* Adjust height as needed */
+}
+
+/* Optional: Customize the heading (if any) */
+.calendly-container h2 {
+    font-size: 28px;
+    color: #ff9350;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif; /* Set a clean font */
+}
+
+/* Optional: Customize any button in the container (if any) */
+.calendly-container button {
+    background-color: #ff9350;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.calendly-container button:hover {
+    background-color: #fb731c; /* Hover effect for button */
+}
+
+/*** demo end  ***/
+/*** help start  ***/
+.whatsapp-chat {
+    position: fixed;
+    bottom: 20px;
+    left: 50px; /* Move the icon to the left */
+    z-index: 100;
+    
+  }
+  
+  .whatsapp-chat img {
+    width: 60px; /* Adjust size as needed */
+    height: 60px;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .whatsapp-chat img:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Tooltip text */
+  .tooltip-text {
+    visibility: hidden;
+    opacity: 0;
+    width: 150px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    bottom: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: opacity 0.3s ease;
+    font-size: 12px;
+    z-index: 101;
+    pointer-events: none;
+  }
+  
+  /* Show tooltip on hover */
+  .whatsapp-chat:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+
+/*** help end  ***/
+
