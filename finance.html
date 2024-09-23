@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>workZen</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+        <link href="img/zen.png" rel="icon">
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Saira:wght@500;600;700&display=swap" rel="stylesheet"> 
+
+        <!-- Icon Font Stylesheet -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <!-- Libraries Stylesheet -->
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <!-- Spinner Start -->
+        <div id="spinner" class="show position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-grow text-primary" role="status"></div>
+        </div>
+        <!-- Spinner End -->
+
+        <!-- Topbar Start -->
+        <div class="container-fluid bg-dark py-2 d-none d-md-flex">
+            <div class="container">
+                <div class="d-flex justify-content-between topbar">
+                    <div class="top-info">
+                        <small class="me-3 text-white"><a class="text-white" href="#"><i class="fa-solid fa-clock me-2 text-white"></i>Mon - Fri 8:00 - 18:00 / Sunday 8:00 - 14:00</small></a>
+                        <small class="me-3 text-white"><a class="text-white" href="#"><i class="fa-solid fa-phone me-2 text-white"></i>(888) 869-9554</small></a>
+                        <small class="me-3 text-white"><a class="text-white" href="#"><i class="fas fa-map-marker-alt me-2 text-white"></i>522 Glenwood Ave, 11701</small></a>
+                    </div>
+                    <div class="top-link">
+                        <a href="https://www.facebook.com/profile.php?id=61564970678171" class=" nav-fill btn btn-sm-square rounded-circle"><i class="fab fa-facebook-f text-primary"></i></a>
+                       
+                        <a href="https://www.instagram.com/teamworkzen360/" class=" nav-fill btn btn-sm-square rounded-circle"><i class="fab fa-instagram text-primary"></i></a>
+                        <a href="https://www.linkedin.com/company/workzen360/?viewAsMember=true" class=" nav-fill btn btn-sm-square rounded-circle me-0"><i class="fab fa-linkedin-in text-primary"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Topbar End -->
+
+        <!-- Navbar Start -->
+        <div class="container-fluid bg-primary">
+            <div class="container">
+                <nav class="navbar navbar-dark navbar-expand-lg py-0">
+                    <a href="index.html" class="navbar-brand">
+                        <div class="top-lgo">
+                            <img src="img/logo-top.png" alt="">
+                          </div>
+                    </a>
+                    <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse bg-transparent" id="navbarCollapse">
+                        <div class="navbar-nav ms-auto mx-xl-auto p-0">
+                            <a href="index.html" class="nav-item nav-link">Home</a>
+                            <a href="about.html" class="nav-item nav-link">About</a>
+                            <a href="whyus.html" class="nav-item nav-link">Why Us</a>
+                            <a href="service.html" class="nav-item nav-link">Services</a>
+                            
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Industires</a>
+                                <div class="dropdown-menu rounded">
+                              
+                                    <a href="realstate.html" class="dropdown-item ">Real Estate</a>
+                                    <a href="saas.html" class="dropdown-item ">SaaS</a>
+                                    <a href="agencyowner.html" class="dropdown-item ">Agencies</a>
+                                    <a href="ecommerce.html" class="dropdown-item">E Commerce</a>
+                                    <a href="techstartup.html" class="dropdown-item">Tech Startups</a>
+                                    <a href="medical.html" class="dropdown-item">Medical</a>
+                                <a href="finance.html" class="dropdown-item active">Finance</a>
+                                <a href="project.html" class="dropdown-item">Project Management</a>
+                                    <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                                </div>
+                            </div>
+                            <a href="contact.html" class="nav-item nav-link">Contact</a>
+                            <a href="team.html" class="nav-item nav-link">Our Team</a>
+                            <a href="pricing.html" class="nav-item nav-link">Pricing</a>
+                        </div>
+                        <a href="demo.html" class="nav-item nav-link book-meeting">Book Meeting?</a>
+                    </div>
+                    <!-- <div class="d-none d-xl-flex flex-shirink-0">
+                        <div id="phone-tada" class="d-flex align-items-center justify-content-center me-4">
+                            <a href="" class="position-relative animated tada infinite">
+                                <i class="fa fa-phone-alt text-white fa-2x"></i>
+                                <div class="position-absolute" style="top: -7px; left: 20px;">
+                                    <span><i class="fa fa-comment-dots text-secondary"></i></span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="d-flex flex-column pe-4 border-end">
+                            <span class="text-white-50">Have any questions?</span>
+                            <span class="text-secondary">Call: + 0123 456 7890</span>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-center ms-4 ">
+                            <a href="#"><i class="bi bi-search text-white fa-2x"></i> </a>
+                        </div>
+                    </div> -->
+                </nav>
+            </div>
+        </div>
+        
+        <!-- Navbar End -->
+
+        
+        <!-- Page Header Start -->
+        <div class="container-fluid page-header py-5">
+            <div class="container text-center py-5">
+                <h1 class="display-2 text-white mb-4 animated slideInDown">Finance</h1>
+                <nav aria-label="breadcrumb animated slideInDown">
+                    <ol class="breadcrumb justify-content-center mb-0">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a href="#">Industires</a></li>
+                        <li class="breadcrumb-item" aria-current="page">Finance</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <!-- Page Header End -->
+
+
+      <!-- Clients -->
+<section id="clients-section" class="wow fadeInUp">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-5">
+                <div class="clients-info">
+                    <span class="orange-line"></span>
+                    <h4>Trusted by 500+ world-class brands and organizations of all sizes</h4>
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="clients-logos">
+                    <div class="logo-wrapper">
+                        <img src="clients/client-1.png" alt="Client 1">
+                        <img src="clients/client-2.png" alt="Client 2">
+                        <img src="clients/client-3.png" alt="Client 3">
+                        <img src="clients/client-4.png" alt="Client 4">
+                        <img src="clients/client-5.png" alt="Client 5">
+                        <img src="clients/client-6.png" alt="Client 6">
+                        <img src="clients/client-7.png" alt="Client 7">
+                        <img src="clients/client-8.png" alt="Client 8">
+                        <img src="clients/client-9.png" alt="Client 9">
+                        <img src="clients/client-10.png" alt="Client 10">
+                        <img src="clients/client-11.png" alt="Client 11">
+                        <img src="clients/client-12.png" alt="Client 12">
+                        <img src="clients/client-13.png" alt="Client 13">
+                        <img src="clients/client-14.png" alt="Client 14">
+                        <img src="clients/client-15.png" alt="Client 15">
+                        <img src="clients/client-16.png" alt="Client 16">
+                        <img src="clients/client-17.png" alt="Client 17">
+                        <img src="clients/client-18.png" alt="Client 18">
+                        <img src="clients/client-19.png" alt="Client 19">
+                        <img src="clients/client-20.png" alt="Client 20">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <script>
+$(document).ready(function(){
+  var $logoWrapper = $('.logo-wrapper');
+  var $logos = $logoWrapper.html(); // Get all logos
+  $logoWrapper.append($logos); // Clone logos to ensure smooth scrolling
+});
+
+
+    </script>
+        <!-- Fact End -->
+
+<!-- industries Start -->
+ <!-- Header Section -->
+ <header class="va-header">
+    <div class="va-header-container">
+        <!-- Left: Text Content -->
+        <div class="va-header-text">
+            <h1>Elevate Your Financial Operations with Expert Virtual Assistants</h1>
+            <p>Empower your financial practice with the support of highly skilled professionals handling key administrative, operational, and compliance tasks.</p>
+
+            <!-- Subtext Below the Header -->
+            <div class="va-header-subtext">
+                <p><i class="fas fa-check-circle"></i> Enhance productivity by delegating data entry, document management, and client correspondence.</p>
+                <p><i class="fas fa-check-circle"></i> Ensure accuracy and compliance with our experienced financial VAs.</p>
+                <p><i class="fas fa-check-circle"></i> Seamlessly integrate our services with your financial software and existing workflows.</p>
+            </div>
+        </div>
+
+        <!-- Right: Image Content -->
+        <div class="va-header-image">
+            <img src="img/finance.jpg" alt="Finance Virtual Assistance">
+        </div>
+    </div>
+</header>
+<!-- Why Choose Us Section -->
+<section class="va-why-choose-us">
+    <h2>Why WorkZen is Essential for Finance Professionals</h2>
+    <div class="va-benefits">
+        <div class="va-benefit">
+            <i class="fas fa-chart-pie"></i>
+            <h3>Streamline Operations</h3>
+            <p>Reduce operational bottlenecks by delegating routine financial and administrative tasks to our dedicated virtual assistants.</p>
+        </div>
+        <div class="va-benefit">
+            <i class="fas fa-hand-holding-usd"></i>
+            <h3>Financial Expertise</h3>
+            <p>Our VAs are well-versed in the nuances of financial management, ensuring your practice runs smoothly and in compliance with industry standards.</p>
+        </div>
+        <div class="va-benefit">
+            <i class="fas fa-balance-scale"></i>
+            <h3>Ensure Compliance</h3>
+            <p>Our assistants stay updated on regulatory requirements and assist in ensuring your operations remain compliant with financial laws and regulations.</p>
+        </div>
+        <div class="va-benefit">
+            <i class="fas fa-cogs"></i>
+            <h3>Scalable Solutions</h3>
+            <p>As your firm grows, so do our services. We offer scalable solutions that adapt to the needs of your expanding client base and operational demands.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Services Offered Section -->
+<section class="va-services">
+    <h2>Tailored Services for Finance Professionals</h2>
+    <ul>
+        <li><i class="fas fa-file-invoice-dollar"></i> <strong>Accounting & Bookkeeping:</strong> Our assistants manage your ledgers, invoicing, payroll processing, and reconciliations with impeccable accuracy.</li>
+        <li><i class="fas fa-chart-bar"></i> <strong>Financial Analysis & Reporting:</strong> We compile financial data, generate reports, and provide insights that aid in strategic decision-making.</li>
+        <li><i class="fas fa-tasks"></i> <strong>Administrative Support:</strong> Efficiently handle correspondence, document preparation, and scheduling, freeing your team to focus on higher-value tasks.</li>
+        <li><i class="fas fa-database"></i> <strong>Data Entry & Compliance Monitoring:</strong> Ensure that all financial data is accurately recorded and comply with industry regulations, reducing your risk exposure.</li>
+        <li><i class="fas fa-user-tie"></i> <strong>Client Relations:</strong> Our VAs provide seamless client communication, handling inquiries, meeting scheduling, and report dissemination.</li>
+        <li><i class="fas fa-briefcase"></i> <strong>Portfolio & Investment Management Support:</strong> Assist with portfolio updates, tracking investment performance, and preparing reports for client meetings.</li>
+    </ul>
+</section>
+
+
+<!-- Testimonials Section -->
+<section class="va-testimonials">
+    <h2>Client Testimonials</h2>
+    <div class="va-testimonial">
+        <p><i class="fas fa-quote-left"></i> WorkZen has become an integral part of our financial advisory firm. From managing client portfolios to preparing compliance reports, their VAs handle it all with exceptional precision. <i class="fas fa-quote-right"></i></p>
+        <span>— Sarah M., Wealth Management Consultant</span>
+    </div>
+    <div class="va-testimonial">
+        <p><i class="fas fa-quote-left"></i> Our virtual assistant streamlined our bookkeeping and accounting processes, allowing us to focus on providing better service to our clients. We’ve seen a remarkable improvement in efficiency. <i class="fas fa-quote-right"></i></p>
+        <span>— James L., Financial Analyst</span>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="va-faq">
+    <h2>Frequently Asked Questions</h2>
+    <div class="va-faq-item">
+        <h3 class="faq-question">
+            1. How secure is my financial data with your virtual assistants?
+            <i class="fas fa-chevron-down"></i>
+        </h3>
+        <p class="faq-answer">Our VAs are trained in data security protocols and adhere to strict confidentiality agreements, ensuring that your financial data remains secure and private.</p>
+    </div>
+    <div class="va-faq-item">
+        <h3 class="faq-question">
+            2. Can your VAs handle complex financial tasks like portfolio management?
+            <i class="fas fa-chevron-down"></i>
+        </h3>
+        <p class="faq-answer">Yes, we have experienced virtual assistants skilled in managing portfolios, tracking investment performance, and generating detailed financial reports.</p>
+    </div>
+    <div class="va-faq-item">
+        <h3 class="faq-question">
+            3. Can I hire a virtual assistant for specific tasks only?
+            <i class="fas fa-chevron-down"></i>
+        </h3>
+        <p class="faq-answer">Absolutely! You can choose the specific services you need, from client communication to financial reporting, and scale as necessary.</p>
+    </div>
+    <div class="va-faq-item">
+        <h3 class="faq-question">
+            4. How do you ensure compliance with financial regulations?
+            <i class="fas fa-chevron-down"></i>
+        </h3>
+        <p class="faq-answer">Our VAs are trained to stay updated on industry regulations and ensure that all processes follow the legal and compliance standards required for financial institutions.</p>
+    </div>
+    <div class="va-faq-item">
+        <h3 class="faq-question">
+            5. How can I get started with a virtual assistant for my finance firm?
+            <i class="fas fa-chevron-down"></i>
+        </h3>
+        <p class="faq-answer">We offer a free consultation to assess your firm’s needs and match you with the most qualified virtual assistant. From there, we onboard the VA into your business processes seamlessly.</p>
+    </div>
+</section>
+
+<script>
+    document.querySelectorAll('.va-faq-item').forEach(item => {
+        item.addEventListener('click', () => {
+            item.classList.toggle('active');
+            document.querySelectorAll('.va-faq-item').forEach(other => {
+                if (other !== item) {
+                    other.classList.remove('active');
+                }
+            });
+        });
+    });
+</script>
+
+<!-- industries End -->
+
+        <!-- Footer Start -->
+         <div class="container-fluid footer bg-dark wow fadeIn" data-wow-delay=".3s">
+            <div class="container pt-5 pb-4">
+                <div class="row g-5">
+                    <div class="col-lg-3 col-md-6">
+                        <a href="index.html">
+                            <div class="top-lgo">
+                                <img src="img/logo-top.png" alt="">
+                              </div>
+                        </a>
+                        <p class="mt-4 text-light">Empowering Your Business, One Task at a Time</p>
+                        <div class="d-flex hightech-link">
+                            <a href="https://www.facebook.com/profile.php?id=61564970678171" class="btn-light nav-fill btn btn-square rounded-circle me-2"><i class="fab fa-facebook-f text-primary"></i></a>
+                           
+                            <a href="https://www.instagram.com/teamworkzen360/" class="btn-light nav-fill btn btn-square rounded-circle me-2"><i class="fab fa-instagram text-primary"></i></a>
+                            <a href="https://www.linkedin.com/company/workzen360/?viewAsMember=true" class="btn-light nav-fill btn btn-square rounded-circle me-0"><i class="fab fa-linkedin-in text-primary"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <a href="#" class="h3 text-secondary">Short Link</a>
+                        <div class="mt-4 d-flex flex-column short-link">
+                            <a href="about.html" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>About us</a>
+                            <a href="contact.html" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Contact us</a>
+                            
+                            <a href="service.html" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Our Services</a>
+                            <a href="industries.html" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Industries</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <a href="#" class="h3 text-secondary">Help Link</a>
+                        <div class="mt-4 d-flex flex-column help-link">
+                            <a href="helplink.html" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Terms Of use</a>
+                            <a href="helplink.html" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Privacy Policy</a>
+                            <a href="helplink.html" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Helps</a>
+                            <a href="helplink.html" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>FQAs</a>
+                            
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <a href="#" class="h3 text-secondary">Contact Us</a>
+                        <div class="text-white mt-4 d-flex flex-column contact-link">
+                            <a href="#" class="pb-3 text-light border-bottom border-primary"><i class="fas fa-map-marker-alt text-secondary me-2"></i>522 Glenwood Ave, 11701</a>
+                            <a href="#" class="py-3 text-light border-bottom border-primary"><i class="fas fa-phone-alt text-secondary me-2"></i> (888) 869-9554</a>
+                            <a href="#" class="py-3 text-light border-bottom border-primary"><i class="fas fa-envelope text-secondary me-2"></i>support@workzen360</a>
+                        </div>
+                    </div>
+                </div>
+                <hr class="text-light mt-5 mb-4">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start">
+                        <span class="text-light"><a href="#" class="text-secondary"><i class="fas fa-copyright text-secondary me-2"></i>workZen</a>, All right reserved.</span>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                     
+                        <span class="text-light">Designed By<a href="" class="text-secondary">Team workZen</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-secondary btn-square rounded-circle back-to-top"><i class="fa fa-arrow-up text-white"></i></a>
+
+        
+        <!-- JavaScript Libraries -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+     <!-- customer service -->
+<!-- <div class="whatsapp-chat">
+    <a href="https://wa.me/message/MZ3F5EBCRI72C1" target="_blank">
+      <img src="https://img.icons8.com/color/48/000000/whatsapp.png" alt="WhatsApp Chat" />
+      <span class="tooltip-text">24/7 Customer Support</span>
+    </a>
+  </div>
+   -->
+      <!-- customer service -->
+
+    </body>
+
+</html>
