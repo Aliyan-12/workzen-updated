@@ -111,6 +111,14 @@
 
 
 /*** Navbar Start ***/
+.navbar.navbar-open{
+    background-color: grey;
+}
+@media (max-width: 576px) {
+    .navbar.navbar-open {
+        background-color: grey;
+    }
+}
 .nav-changed{
     margin-top: 20px;
     z-index: 5;
@@ -186,15 +194,22 @@
 
 
 @media (max-width: 991px) {
-    /* Full-screen grey background when navbar is open */
+    
    
    
     .navbar-nav {
         flex-direction: column;
-        gap: 20px; /* Space between menu items */
+        gap: 20px; 
     }
 
-    /* Apply glow effect to nav links when navbar is open */
+    .navbar-collapse.show{
+        BACKGROUND: #fff;
+    align-items: center;
+    border-radius: 20px;
+    /* display: flex; */
+    justify-content: space-between;
+    flex-direction: column;
+    }   
     .navbar-collapse.show .nav-link {
         color: black;
         font-size: 1.5rem;
@@ -212,7 +227,7 @@
 
     /* Optional: Style the navbar toggler (close button) */
     .navbar-toggler {
-        position: absolute;
+     
         top: 20px;
         right: 20px;
         color: white;

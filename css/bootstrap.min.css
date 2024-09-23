@@ -4403,7 +4403,7 @@ fieldset:disabled .btn {
 
 .nav-link:hover,
 .nav-link:focus {
-    color: #133592
+    color: #ff9838
 }
 
 .nav-link.disabled {
@@ -4458,7 +4458,7 @@ fieldset:disabled .btn {
 .nav-pills .nav-link.active,
 .nav-pills .show>.nav-link {
     color: #fff;
-    background-color: #1842b6
+    background-color: #000000
 }
 
 .nav-fill>.nav-link,
@@ -4620,11 +4620,14 @@ fieldset:disabled .btn {
     }
 }
 
+
+
 @media(min-width: 768px) {
     .navbar-expand-md {
         flex-wrap: nowrap;
         justify-content: flex-start
     }
+   
 
     .navbar-expand-md .navbar-nav {
         flex-direction: row
