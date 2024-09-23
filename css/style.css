@@ -869,6 +869,67 @@
 
 
 /*** Team Start ***/
+.team-profile {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 2rem;
+    
+    font-family: 'Arial', sans-serif;
+}
+
+.profile-row {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.left {
+    flex-direction: row; /* Image on left, text on right */
+}
+
+.right {
+    flex-direction: row-reverse; /* Image on right, text on left */
+}
+
+.profile-row:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.profile-img img {
+    width: 370px;
+    
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.profile-img img:hover {
+    transform: scale(1.05);
+}
+
+.profile-text {
+    max-width: 500px;
+}
+
+.profile-text p {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.5;
+}
+
+.profile-text span {
+    display: block;
+    margin-top: 0.5rem;
+    font-weight: bold;
+    color: #007BFF; /* Change text color for emphasis */
+}
+
 .team-set {
     display: flex;
     justify-content: space-between;
