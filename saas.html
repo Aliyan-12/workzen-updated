@@ -188,7 +188,7 @@ $(document).ready(function(){
         <!-- Fact End -->
 
 <!-- industries Start -->
-<header class="va-header">
+<header class="va-header abt-timeline-item">
     <div class="va-header-container">
         <!-- Left: Text Content -->
         <div class="va-header-text">
@@ -210,7 +210,7 @@ $(document).ready(function(){
     </div>
 </header>
 
-<section class="va-why-choose-us">
+<section class="va-why-choose-us abt-timeline-item">
     <h2>Why Our Virtual Assistants Are a Game-Changer for SaaS Companies</h2>
     <div class="va-benefits">
         <div class="va-benefit">
@@ -236,7 +236,7 @@ $(document).ready(function(){
     </div>
 </section>
 
-<section class="va-services">
+<section class="va-services abt-timeline-item">
     <h2>Tailored Solutions for SaaS Pioneers</h2>
     <ul>
         <li><i class="fas fa-cogs"></i> <strong>Product Management:</strong> Streamline product development and lifecycle management with expert oversight and coordination.</li>
@@ -247,7 +247,7 @@ $(document).ready(function(){
     </ul>
 </section>
 
-<section class="va-testimonials">
+<section class="va-testimonials abt-timeline-item">
     <h2>Success Stories from Leading SaaS Innovators</h2>
     <div class="va-testimonial">
         <p><i class="fas fa-quote-left"></i> Partnering with a virtual assistant has been transformative for our SaaS operations. We've seen remarkable gains in efficiency and innovation. <i class="fas fa-quote-right"></i></p>
@@ -259,7 +259,7 @@ $(document).ready(function(){
     </div>
 </section>
 
-<section class="va-faq">
+<section class="va-faq abt-timeline-item">
     <h2>Frequently Asked Questions</h2>
     <div class="va-faq-item">
         <h3 class="faq-question">
@@ -298,6 +298,28 @@ $(document).ready(function(){
     </div>
 </section>
 
+
+<script>
+   document.addEventListener('DOMContentLoaded', () => {
+    const timelineItems = document.querySelectorAll('.abt-timeline-item');
+
+    const revealTimeline = () => {
+        timelineItems.forEach(item => {
+            const itemPosition = item.getBoundingClientRect().top;
+            const screenPosition = window.innerHeight / 1.2;
+
+            if (itemPosition < screenPosition) {
+                item.classList.add('show');
+            }
+        });
+    };
+
+    window.addEventListener('scroll', revealTimeline);
+    revealTimeline();  // Trigger on load for any visible items
+});
+
+
+</script>
 <script>
 document.querySelectorAll('.va-faq-item').forEach(item => {
     item.addEventListener('click', () => {

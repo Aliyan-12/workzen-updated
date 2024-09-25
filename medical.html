@@ -190,7 +190,7 @@ $(document).ready(function(){
 <!-- industries Start -->
 <!-- Header Section -->
 <header class="va-header">
-    <div class="va-header-container">
+    <div class="va-header-container abt-timeline-item">
         <!-- Left: Text Content -->
         <div class="va-header-text">
             <h1>Streamline Your Medical Practice with Expert Virtual Assistants</h1>
@@ -212,7 +212,7 @@ $(document).ready(function(){
 </header>
 
 <!-- Why Choose Us Section -->
-<section class="va-why-choose-us">
+<section class="va-why-choose-us abt-timeline-item">
     <h2>Why Choose WorkZen for Your Medical Practice?</h2>
     <div class="va-benefits">
         <div class="va-benefit">
@@ -239,7 +239,7 @@ $(document).ready(function(){
 </section>
 
 <!-- Services Offered Section -->
-<section class="va-services">
+<section class="va-services abt-timeline-item">
     <h2>Customized Services for Medical Professionals</h2>
     <ul>
         <li><i class="fas fa-user-md"></i> <strong>Patient Appointment Management:</strong> Efficiently handle patient bookings, cancellations, and follow-ups, ensuring your schedule runs smoothly.</li>
@@ -252,7 +252,7 @@ $(document).ready(function(){
 </section>
 
 <!-- Testimonials Section -->
-<section class="va-testimonials">
+<section class="va-testimonials abt-timeline-item">
     <h2>What Our Medical Clients Say</h2>
     <div class="va-testimonial">
         <p><i class="fas fa-quote-left"></i> WorkZen’s virtual assistant has been a game-changer for our clinic. From managing our appointment schedules to billing, the support has been invaluable. <i class="fas fa-quote-right"></i></p>
@@ -267,35 +267,35 @@ $(document).ready(function(){
 <!-- FAQ Section -->
 <section class="va-faq">
     <h2>Frequently Asked Questions</h2>
-    <div class="va-faq-item">
+    <div class="va-faq-item abt-timeline-item">
         <h3 class="faq-question">
             1. How does the onboarding process work?
             <i class="fas fa-chevron-down"></i>
         </h3>
         <p class="faq-answer">We start with an in-depth consultation to understand your medical practice’s specific needs and match you with a qualified assistant.</p>
     </div>
-    <div class="va-faq-item">
+    <div class="va-faq-item abt-timeline-item">
         <h3 class="faq-question">
             2. Are your virtual assistants HIPAA-compliant?
             <i class="fas fa-chevron-down"></i>
         </h3>
         <p class="faq-answer">Yes, all of our virtual assistants are trained in HIPAA compliance and handle patient data with the utmost care and confidentiality.</p>
     </div>
-    <div class="va-faq-item">
+    <div class="va-faq-item abt-timeline-item">
         <h3 class="faq-question">
             3. Can I hire a virtual assistant for specific tasks?
             <i class="fas fa-chevron-down"></i>
         </h3>
         <p class="faq-answer">Absolutely! You can customize the services you need, whether it’s handling patient communication, managing EMRs, or administrative tasks.</p>
     </div>
-    <div class="va-faq-item">
+    <div class="va-faq-item abt-timeline-item">
         <h3 class="faq-question">
             4. How do you ensure security and confidentiality?
             <i class="fas fa-chevron-down"></i>
         </h3>
         <p class="faq-answer">We enforce strict data protection protocols and NDAs, ensuring your practice’s sensitive data is always secure.</p>
     </div>
-    <div class="va-faq-item">
+    <div class="va-faq-item abt-timeline-item">
         <h3 class="faq-question">
             5. Can I scale the services as my practice grows?
             <i class="fas fa-chevron-down"></i>
@@ -303,6 +303,47 @@ $(document).ready(function(){
         <p class="faq-answer">Yes, our virtual assistant services are fully scalable, meaning you can adjust the support level as your practice expands.</p>
     </div>
 </section>
+<script>
+      document.addEventListener('DOMContentLoaded', () => {
+    const timelineItems = document.querySelectorAll('.abt-timeline-item');
+
+    const revealTimeline = () => {
+        timelineItems.forEach(item => {
+            const itemPosition = item.getBoundingClientRect().top;
+            const screenPosition = window.innerHeight / 1.2;
+
+            if (itemPosition < screenPosition) {
+                item.classList.add('show');
+            }
+        });
+    };
+
+    window.addEventListener('scroll', revealTimeline);
+    revealTimeline();  // Trigger on load for any visible items
+});
+
+</script>
+
+<script>
+      document.addEventListener('DOMContentLoaded', () => {
+    const timelineItems = document.querySelectorAll('.abt-timeline-item');
+
+    const revealTimeline = () => {
+        timelineItems.forEach(item => {
+            const itemPosition = item.getBoundingClientRect().top;
+            const screenPosition = window.innerHeight / 1.2;
+
+            if (itemPosition < screenPosition) {
+                item.classList.add('show');
+            }
+        });
+    };
+
+    window.addEventListener('scroll', revealTimeline);
+    revealTimeline();  // Trigger on load for any visible items
+});
+
+</script>
 
 <script>
     document.querySelectorAll('.va-faq-item').forEach(item => {
