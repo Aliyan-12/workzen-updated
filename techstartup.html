@@ -188,7 +188,7 @@ $(document).ready(function(){
         <!-- Fact End -->
 
 <!-- industries Start -->
-<header class="va-header">
+<header class="va-header abt-timeline-item">
     <div class="va-header-container">
         <!-- Left: Text Content -->
         <div class="va-header-text">
@@ -210,25 +210,25 @@ $(document).ready(function(){
     </div>
 </header>
 
-<section class="va-why-choose-us">
+<section class="va-why-choose-us abt-timeline-item">
     <h2>Why Elite Virtual Assistants Are a Game-Changer for Tech Startups</h2>
     <div class="va-benefits">
-        <div class="va-benefit">
+        <div class="va-benefit abt-timeline-item">
             <i class="fas fa-clock"></i>
             <h3>Turbocharge Your Operations</h3>
             <p>Delegate critical tasks like product management, tech support, and market research with precision to enhance your operational efficiency.</p>
         </div>
-        <div class="va-benefit">
+        <div class="va-benefit abt-timeline-item">
             <i class="fas fa-user-tie"></i>
             <h3>Elite Talent at Your Fingertips</h3>
             <p>Access top-tier professionals with specialized expertise in cutting-edge technologies and startup ecosystems.</p>
         </div>
-        <div class="va-benefit">
+        <div class="va-benefit abt-timeline-item">
             <i class="fas fa-wallet"></i>
             <h3>Exceptional Value, Unmatched ROI</h3>
             <p>Achieve extraordinary results without the heavy financial burden of permanent hires, maximizing your startup’s ROI.</p>
         </div>
-        <div class="va-benefit">
+        <div class="va-benefit abt-timeline-item">
             <i class="fas fa-chart-line"></i>
             <h3>Agility and Scalability</h3>
             <p>Scale your virtual assistance seamlessly as your startup evolves, ensuring agility and adaptability in a rapidly changing tech environment.</p>
@@ -236,7 +236,7 @@ $(document).ready(function(){
     </div>
 </section>
 
-<section class="va-services">
+<section class="va-services abt-timeline-item">
     <h2>Innovative Services for Visionary Tech Startups</h2>
     <ul>
         <li><i class="fas fa-rocket"></i> <strong>Product Development Support:</strong> Accelerate your development cycle with expert assistance in project management, coding, and testing.</li>
@@ -247,7 +247,7 @@ $(document).ready(function(){
     </ul>
 </section>
 
-<section class="va-testimonials">
+<section class="va-testimonials abt-timeline-item">
     <h2>Success Stories from Tech Innovators</h2>
     <div class="va-testimonial">
         <p><i class="fas fa-quote-left"></i> Integrating virtual assistants into our startup was a game-changer. Their expertise in product management and tech support propelled us forward. <i class="fas fa-quote-right"></i></p>
@@ -261,35 +261,35 @@ $(document).ready(function(){
 
 <section class="va-faq">
     <h2>Frequently Asked Questions</h2>
-    <div class="va-faq-item">
+    <div class="va-faq-item abt-timeline-item">
         <h3 class="faq-question">
             1. How does the onboarding process work?
             <i class="fas fa-chevron-down"></i>
         </h3>
         <p class="faq-answer">We initiate with a comprehensive consultation to grasp your startup's vision and requirements, then pair you with a top-tier assistant who aligns with your strategic objectives.</p>
     </div>
-    <div class="va-faq-item">
+    <div class="va-faq-item abt-timeline-item">
         <h3 class="faq-question">
             2. Can I hire a virtual assistant for a specific number of hours per week?
             <i class="fas fa-chevron-down"></i>
         </h3>
         <p class="faq-answer">Absolutely! We offer flexible engagement models that adapt to your evolving needs and workload, ensuring optimal support.</p>
     </div>
-    <div class="va-faq-item">
+    <div class="va-faq-item abt-timeline-item">
         <h3 class="faq-question">
             3. What if the virtual assistant doesn’t meet my expectations?
             <i class="fas fa-chevron-down"></i>
         </h3>
         <p class="faq-answer">We provide a satisfaction guarantee with the option for a swift replacement if needed, ensuring that you receive the perfect support for your startup.</p>
     </div>
-    <div class="va-faq-item">
+    <div class="va-faq-item abt-timeline-item">
         <h3 class="faq-question">
             4. Will my assistant be familiar with the tech tools I use?
             <i class="fas fa-chevron-down"></i>
         </h3>
         <p class="faq-answer">Our assistants are highly skilled in a range of tech tools and platforms. We also offer tailored training for any specific technologies your startup employs.</p>
     </div>
-    <div class="va-faq-item">
+    <div class="va-faq-item abt-timeline-item">
         <h3 class="faq-question">
             5. How is data security handled?
             <i class="fas fa-chevron-down"></i>
@@ -298,6 +298,26 @@ $(document).ready(function(){
     </div>
 </section>
 
+<script>
+      document.addEventListener('DOMContentLoaded', () => {
+    const timelineItems = document.querySelectorAll('.abt-timeline-item');
+
+    const revealTimeline = () => {
+        timelineItems.forEach(item => {
+            const itemPosition = item.getBoundingClientRect().top;
+            const screenPosition = window.innerHeight / 1.2;
+
+            if (itemPosition < screenPosition) {
+                item.classList.add('show');
+            }
+        });
+    };
+
+    window.addEventListener('scroll', revealTimeline);
+    revealTimeline();  // Trigger on load for any visible items
+});
+
+</script>
 <script>
 document.querySelectorAll('.va-faq-item').forEach(item => {
     item.addEventListener('click', () => {

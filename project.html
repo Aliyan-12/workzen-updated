@@ -188,7 +188,7 @@ $(document).ready(function(){
         <!-- Fact End -->
 
 <!-- industries Start -->
-<header class="va-header">
+<header class="va-header abt-timeline-item">
     <div class="va-header-container">
         <!-- Left: Text Content -->
         <div class="va-header-text">
@@ -211,7 +211,7 @@ $(document).ready(function(){
 </header>
 
 <!-- Services Offered Section -->
-<section class="va-services">
+<section class="va-services abt-timeline-item">
     <h2>Dedicated Services for Project Managers</h2>
     <ul>
         <li><i class="fas fa-tasks"></i> <strong>Project Coordination:</strong> Manage task assignment, follow-up on deliverables, and keep your team aligned with project goals and timelines.</li>
@@ -224,7 +224,7 @@ $(document).ready(function(){
 </section>
 
 <!-- Why Choose Us Section -->
-<section class="va-why-choose-us">
+<section class="va-why-choose-us abt-timeline-item">
     <h2>Why Choose WorkZen for Project Management?</h2>
     <div class="va-benefits">
         <div class="va-benefit">
@@ -251,7 +251,7 @@ $(document).ready(function(){
 </section>
 
 <!-- Testimonials Section -->
-<section class="va-testimonials">
+<section class="va-testimonials abt-timeline-item">
     <h2>Client Testimonials</h2>
     <div class="va-testimonial">
         <p><i class="fas fa-quote-left"></i> WorkZen has revolutionized how we manage our projects. Their virtual assistants handle everything from task assignments to progress reporting, allowing us to focus on delivering results. <i class="fas fa-quote-right"></i></p>
@@ -264,30 +264,30 @@ $(document).ready(function(){
 </section>
 
 <!-- FAQ Section -->
-<section class="va-faq">
+<section class="va-faq abt-timeline-item">
     <h2>Frequently Asked Questions</h2>
-    <div class="va-faq-item">
+    <div class="va-faq-item abt-timeline-item">
         <h3 class="faq-question">
             1. How do your virtual assistants integrate with our project management tools?
             <i class="fas fa-chevron-down"></i>
         </h3>
         <p class="faq-answer">Our VAs are experienced with industry-standard tools such as Asana, Trello, Jira, Monday.com, and others. They seamlessly integrate with your current systems to support efficient project management processes.</p>
     </div>
-    <div class="va-faq-item">
+    <div class="va-faq-item abt-timeline-item">
         <h3 class="faq-question">
             2. Can your VAs help with multiple projects at once?
             <i class="fas fa-chevron-down"></i>
         </h3>
         <p class="faq-answer">Absolutely. Our VAs are trained to manage multiple concurrent projects, ensuring each one receives the attention it requires without sacrificing quality or deadlines.</p>
     </div>
-    <div class="va-faq-item">
+    <div class="va-faq-item abt-timeline-item">
         <h3 class="faq-question">
             3. How can your virtual assistants help with project risk management?
             <i class="fas fa-chevron-down"></i>
         </h3>
         <p class="faq-answer">Our assistants monitor project risks closely, identifying potential issues and working with you to develop and implement mitigation strategies to ensure smooth project delivery.</p>
     </div>
-    <div class="va-faq-item">
+    <div class="va-faq-item abt-timeline-item">
         <h3 class="faq-question">
             4. How do I get started with a virtual assistant for project management?
             <i class="fas fa-chevron-down"></i>
@@ -295,6 +295,26 @@ $(document).ready(function(){
         <p class="faq-answer">We start with a consultation to understand your project management needs. Once we know your requirements, we’ll match you with a highly qualified assistant who can seamlessly integrate into your workflow.</p>
     </div>
 </section>
+<script>
+      document.addEventListener('DOMContentLoaded', () => {
+    const timelineItems = document.querySelectorAll('.abt-timeline-item');
+
+    const revealTimeline = () => {
+        timelineItems.forEach(item => {
+            const itemPosition = item.getBoundingClientRect().top;
+            const screenPosition = window.innerHeight / 1.2;
+
+            if (itemPosition < screenPosition) {
+                item.classList.add('show');
+            }
+        });
+    };
+
+    window.addEventListener('scroll', revealTimeline);
+    revealTimeline();  // Trigger on load for any visible items
+});
+
+</script>
 
 <script>
     document.querySelectorAll('.va-faq-item').forEach(item => {

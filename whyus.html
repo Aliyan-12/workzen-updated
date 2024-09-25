@@ -189,25 +189,25 @@ $(document).ready(function(){
 
 <!-- why us Start -->
 <header class="why-workzen-header">
-    <div class="why-workzen-header-container">
+    <div class="why-workzen-header-container abt-timeline-item">
         <h1>Discover Why WorkZen is Your Ultimate Partner</h1>
         <p>Experience unparalleled efficiency and innovation. Empower your organization with our elite virtual assistants, crafted to elevate your business.</p>
     </div>
 </header>
 
 <section class="why-workzen-core-values">
-    <h2>Our Core Values</h2>
-    <div class="why-workzen-value">
+    <h2 class="abt-timeline-item">Our Core Values</h2>
+    <div class="why-workzen-value abt-timeline-item">
         <i class="fas fa-rocket"></i>
         <h3>Relentless Innovation</h3>
         <p>We drive progress with groundbreaking strategies and technologies. Our virtual assistants are at the forefront of industry advancements, ensuring your operations stay ahead of the curve.</p>
     </div>
-    <div class="why-workzen-value">
+    <div class="why-workzen-value abt-timeline-item">
         <i class="fas fa-shield-alt"></i>
         <h3>Uncompromising Integrity</h3>
         <p>Trust and transparency form the bedrock of our service. We adhere to the highest ethical standards, safeguarding your business with confidentiality and reliability.</p>
     </div>
-    <div class="why-workzen-value">
+    <div class="why-workzen-value abt-timeline-item">
         <i class="fas fa-users"></i>
         <h3>Client-Centric Focus</h3>
         <p>Your success is our mission. We customize our approach to align with your unique needs, delivering solutions that are as dynamic and flexible as your business demands.</p>
@@ -215,45 +215,37 @@ $(document).ready(function(){
 </section>
 
 <section class="why-workzen-why-us">
-    <h2>Why Choose WorkZen?</h2>
-    <div class="why-workzen-reason">
+    <h2 class="abt-timeline-item">Why Choose WorkZen?</h2>
+    <div class="why-workzen-reason abt-timeline-item">
         <i class="fas fa-cogs"></i>
         <h3>Exceptional Talent Pool</h3>
         <p>Our virtual assistants are meticulously selected for their expertise and industry acumen. From complex project management to routine administrative tasks, we provide specialists who excel in their domains.</p>
     </div>
-    <div class="why-workzen-reason">
+    <div class="why-workzen-reason abt-timeline-item">
         <i class="fas fa-tachometer-alt"></i>
         <h3>Agility and Scalability</h3>
         <p>Adapt to market changes with unparalleled flexibility. Our services scale seamlessly with your growth, allowing you to expand or contract resources as needed without any hassle.</p>
     </div>
-    <div class="why-workzen-reason">
+    <div class="why-workzen-reason abt-timeline-item">
         <i class="fas fa-dollar-sign"></i>
         <h3>Cost Efficiency Redefined</h3>
         <p>Optimize your budget while maintaining superior service quality. Our cost-effective solutions provide premium support without the financial burden of full-time hires.</p>
     </div>
 </section>
 
-<!-- New Sections -->
-
-
-
-
-
-
-
 <section class="why-workzen-industries">
-    <h2>Virtual Agents Tailored for Your Industry</h2>
-    <div class="why-workzen-industry">
+    <h2 class="abt-timeline-item">Virtual Agents Tailored for Your Industry</h2>
+    <div class="why-workzen-industry abt-timeline-item">
         <i class="fas fa-building"></i>
         <h3>Real Estate</h3>
         <p>Our virtual assistants offer specialized support for real estate professionals, including property management, client communications, and market research, helping you close deals and enhance customer satisfaction.</p>
     </div>
-    <div class="why-workzen-industry">
+    <div class="why-workzen-industry abt-timeline-item">
         <i class="fas fa-store"></i>
         <h3>E-Commerce</h3>
         <p>Boost your online store’s efficiency with virtual assistants skilled in inventory management, customer support, and order fulfillment, ensuring a seamless shopping experience for your customers.</p>
     </div>
-    <div class="why-workzen-industry">
+    <div class="why-workzen-industry abt-timeline-item">
         <i class="fas fa-laptop-code"></i>
         <h3>Tech Startups</h3>
         <p>Our tech-savvy virtual assistants are perfect for startups, providing support in software development, project management, and technical documentation to help you stay ahead in the fast-paced tech world.</p>
@@ -261,6 +253,26 @@ $(document).ready(function(){
 </section>
 
 
+<script>
+   document.addEventListener('DOMContentLoaded', () => {
+    const timelineItems = document.querySelectorAll('.abt-timeline-item');
+
+    const revealTimeline = () => {
+        timelineItems.forEach(item => {
+            const itemPosition = item.getBoundingClientRect().top;
+            const screenPosition = window.innerHeight / 1.2;
+
+            if (itemPosition < screenPosition) {
+                item.classList.add('show');
+            }
+        });
+    };
+
+    window.addEventListener('scroll', revealTimeline);
+    revealTimeline();
+});
+
+</script>
 
 
 <div class="price-area">

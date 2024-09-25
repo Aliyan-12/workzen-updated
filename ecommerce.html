@@ -188,7 +188,7 @@ $(document).ready(function(){
         <!-- Fact End -->
 
 <!-- industries Start -->
-<header class="va-header">
+<header class="va-header abt-timeline-item">
     <div class="va-header-container">
         <!-- Left: Text Content -->
         <div class="va-header-text">
@@ -210,25 +210,25 @@ $(document).ready(function(){
     </div>
 </header>
 
-<section class="va-why-choose-us">
+<section class="va-why-choose-us abt-timeline-item">
     <h2>Why Our Virtual Assistants Are a Game-Changer for E-Commerce</h2>
     <div class="va-benefits">
-        <div class="va-benefit">
+        <div class="va-benefit abt-timeline-item">
             <i class="fas fa-clock"></i>
             <h3>Boost Your Efficiency</h3>
             <p>Delegate high-impact tasks like inventory management, order fulfillment, and customer support with absolute precision.</p>
         </div>
-        <div class="va-benefit">
+        <div class="va-benefit abt-timeline-item">
             <i class="fas fa-user-tie"></i>
             <h3>Top-Tier E-Commerce Experts</h3>
             <p>Our virtual assistants are seasoned professionals with specialized expertise in e-commerce operations and technologies.</p>
         </div>
-        <div class="va-benefit">
+        <div class="va-benefit abt-timeline-item">
             <i class="fas fa-wallet"></i>
             <h3>Cost-Effective Brilliance</h3>
             <p>Get premium support without the heavy financial burden of full-time hires, optimizing your profit margins.</p>
         </div>
-        <div class="va-benefit">
+        <div class="va-benefit abt-timeline-item">
             <i class="fas fa-chart-line"></i>
             <h3>Scalable and Agile</h3>
             <p>Scale your virtual assistance effortlessly as your business evolves, ensuring agility and adaptability in a fast-paced market.</p>
@@ -236,7 +236,7 @@ $(document).ready(function(){
     </div>
 </section>
 
-<section class="va-services">
+<section class="va-services abt-timeline-item">
     <h2>Customized Services for E-Commerce Innovators</h2>
     <ul>
         <li><i class="fas fa-box"></i> <strong>Inventory Management:</strong> Streamline your inventory with precise tracking, stock updates, and order processing.</li>
@@ -247,7 +247,7 @@ $(document).ready(function(){
     </ul>
 </section>
 
-<section class="va-testimonials">
+<section class="va-testimonials abt-timeline-item">
     <h2>Success Stories from E-Commerce Trailblazers</h2>
     <div class="va-testimonial">
         <p><i class="fas fa-quote-left"></i> Integrating a virtual assistant into our e-commerce operations was a game-changer. We've seen a remarkable surge in efficiency and customer satisfaction. <i class="fas fa-quote-right"></i></p>
@@ -259,37 +259,37 @@ $(document).ready(function(){
     </div>
 </section>
 
-<section class="va-faq">
+<section class="va-faq abt-timeline-item">
     <h2>Frequently Asked Questions</h2>
-    <div class="va-faq-item">
+    <div class="va-faq-item abt-timeline-item">
         <h3 class="faq-question">
             1. How does the onboarding process work?
             <i class="fas fa-chevron-down"></i>
         </h3>
         <p class="faq-answer">We initiate with a thorough consultation to understand your e-commerce needs, then match you with a top-tier assistant who aligns perfectly with your goals.</p>
     </div>
-    <div class="va-faq-item">
+    <div class="va-faq-item abt-timeline-item">
         <h3 class="faq-question">
             2. Can I hire a virtual assistant for a specific number of hours per week?
             <i class="fas fa-chevron-down"></i>
         </h3>
-        <p class="faq-answer">Definitely! Our flexible plans are designed to fit your workload and scale with your business growth.</p>
+        <p class="faq-answer ">Definitely! Our flexible plans are designed to fit your workload and scale with your business growth.</p>
     </div>
-    <div class="va-faq-item">
+    <div class="va-faq-item abt-timeline-item">
         <h3 class="faq-question">
             3. What if the virtual assistant doesn’t meet my expectations?
             <i class="fas fa-chevron-down"></i>
         </h3>
         <p class="faq-answer">We offer a satisfaction guarantee and can swiftly provide a replacement if needed, ensuring you receive the perfect support.</p>
     </div>
-    <div class="va-faq-item">
+    <div class="va-faq-item abt-timeline-item">
         <h3 class="faq-question">
             4. Will my assistant be familiar with the e-commerce tools I use?
             <i class="fas fa-chevron-down"></i>
         </h3>
         <p class="faq-answer">Our assistants are adept with leading e-commerce platforms and tools. We also offer custom training for any specific systems you utilize.</p>
     </div>
-    <div class="va-faq-item">
+    <div class="va-faq-item abt-timeline-item">
         <h3 class="faq-question">
             5. How do you handle data security?
             <i class="fas fa-chevron-down"></i>
@@ -297,6 +297,26 @@ $(document).ready(function(){
         <p class="faq-answer">We uphold stringent data security measures, including NDAs for all assistants, to ensure your business and customer data remains secure and confidential.</p>
     </div>
 </section>
+<script>
+      document.addEventListener('DOMContentLoaded', () => {
+    const timelineItems = document.querySelectorAll('.abt-timeline-item');
+
+    const revealTimeline = () => {
+        timelineItems.forEach(item => {
+            const itemPosition = item.getBoundingClientRect().top;
+            const screenPosition = window.innerHeight / 1.2;
+
+            if (itemPosition < screenPosition) {
+                item.classList.add('show');
+            }
+        });
+    };
+
+    window.addEventListener('scroll', revealTimeline);
+    revealTimeline();  // Trigger on load for any visible items
+});
+
+</script>
 
 <script>
 document.querySelectorAll('.va-faq-item').forEach(item => {

@@ -188,7 +188,7 @@ $(document).ready(function(){
         <!-- Fact End -->
 
 <!-- industries Start -->
-<header class="va-header">
+<header class="va-header abt-timeline-item">
     <div class="va-header-container">
         <!-- Left: Text Content -->
         <div class="va-header-text">
@@ -212,25 +212,25 @@ $(document).ready(function(){
 </header>
 
 
-<section class="va-why-choose-us">
+<section class="va-why-choose-us abt-timeline-item">
     <h2>Why Choose Our Virtual Assistants?</h2>
     <div class="va-benefits">
-        <div class="va-benefit">
+        <div class="va-benefit abt-timeline-item">
             <i class="fas fa-clock"></i>
             <h3>Free Up Your Time</h3>
             <p>Delegate routine tasks like scheduling, emails, and client follow-ups with precision.</p>
         </div>
-        <div class="va-benefit">
+        <div class="va-benefit abt-timeline-item">
             <i class="fas fa-user-tie"></i>
             <h3>Highly Skilled Professionals</h3>
             <p>Our virtual assistants come with diverse skill sets to meet your agency's needs.</p>
         </div>
-        <div class="va-benefit">
+        <div class="va-benefit abt-timeline-item">
             <i class="fas fa-wallet"></i>
             <h3>Cost-Effective Solutions</h3>
             <p>Get top-tier support without the overhead costs of hiring permanent employees.</p>
         </div>
-        <div class="va-benefit">
+        <div class="va-benefit abt-timeline-item">
             <i class="fas fa-chart-line"></i>
             <h3>Flexible & Scalable</h3>
             <p>Effortlessly scale your team as your agency grows, with flexibility built into our plans.</p>
@@ -238,7 +238,7 @@ $(document).ready(function(){
     </div>
 </section>
 
-<section class="va-services">
+<section class="va-services abt-timeline-item">
     <h2>Tailored Services for Your Agency</h2>
     <ul>
         <li><i class="fas fa-project-diagram"></i> <strong>Project Management:</strong> Ensure smooth operations with dedicated managers overseeing timelines and deliverables.</li>
@@ -249,7 +249,7 @@ $(document).ready(function(){
     </ul>
 </section>
 
-<section class="va-testimonials">
+<section class="va-testimonials abt-timeline-item">
     <h2>What Our Clients Say</h2>
     <div class="va-testimonial">
         <p><i class="fas fa-quote-left"></i> Partnering with a virtual assistant was the best decision for our agency. Our productivity has skyrocketed. <i class="fas fa-quote-right"></i></p>
@@ -261,37 +261,37 @@ $(document).ready(function(){
     </div>
 </section>
 
-<section class="va-faq">
+<section class="va-faq abt-timeline-item">
     <h2>Frequently Asked Questions</h2>
-    <div class="va-faq-item">
+    <div class="va-faq-item abt-timeline-item">
         <h3 class="faq-question">
             1. How does the onboarding process work?
             <i class="fas fa-chevron-down"></i>
         </h3>
         <p class="faq-answer">We start with a consultation to understand your agency's needs and match you with the best virtual assistant for your team.</p>
     </div>
-    <div class="va-faq-item">
+    <div class="va-faq-item abt-timeline-item">
         <h3 class="faq-question">
             2. Can I hire a virtual assistant for just a few hours a week?
             <i class="fas fa-chevron-down"></i>
         </h3>
         <p class="faq-answer">Yes! We offer flexible plans that allow you to adjust the assistant's hours based on your workload.</p>
     </div>
-    <div class="va-faq-item">
+    <div class="va-faq-item abt-timeline-item">
         <h3 class="faq-question">
             3. What if I’m not satisfied with the virtual assistant?
             <i class="fas fa-chevron-down"></i>
         </h3>
         <p class="faq-answer">We offer a satisfaction guarantee and can replace the assistant at no additional cost.</p>
     </div>
-    <div class="va-faq-item">
+    <div class="va-faq-item abt-timeline-item">
         <h3 class="faq-question">
             4. Will my virtual assistant be familiar with the tools my agency uses?
             <i class="fas fa-chevron-down"></i>
         </h3>
         <p class="faq-answer">Our assistants are trained in popular tools like Asana, Trello, and HubSpot. We also provide training for any specialized tools you use.</p>
     </div>
-    <div class="va-faq-item">
+    <div class="va-faq-item abt-timeline-item">
         <h3 class="faq-question">
             5. How do you ensure data security and confidentiality?
             <i class="fas fa-chevron-down"></i>
@@ -300,6 +300,26 @@ $(document).ready(function(){
     </div>
 </section>
 
+<script>
+      document.addEventListener('DOMContentLoaded', () => {
+    const timelineItems = document.querySelectorAll('.abt-timeline-item');
+
+    const revealTimeline = () => {
+        timelineItems.forEach(item => {
+            const itemPosition = item.getBoundingClientRect().top;
+            const screenPosition = window.innerHeight / 1.2;
+
+            if (itemPosition < screenPosition) {
+                item.classList.add('show');
+            }
+        });
+    };
+
+    window.addEventListener('scroll', revealTimeline);
+    revealTimeline();  // Trigger on load for any visible items
+});
+
+</script>
 <script>
 document.querySelectorAll('.va-faq-item').forEach(item => {
     item.addEventListener('click', () => {

@@ -189,7 +189,7 @@ $(document).ready(function(){
 
 <!-- industries Start -->
  <!-- Header Section -->
- <header class="va-header">
+ <header class="va-header abt-timeline-item">
     <div class="va-header-container">
         <!-- Left: Text Content -->
         <div class="va-header-text">
@@ -211,25 +211,25 @@ $(document).ready(function(){
     </div>
 </header>
 <!-- Why Choose Us Section -->
-<section class="va-why-choose-us">
+<section class="va-why-choose-us abt-timeline-item">
     <h2>Why WorkZen is Essential for Finance Professionals</h2>
     <div class="va-benefits">
-        <div class="va-benefit">
+        <div class="va-benefit abt-timeline-item">
             <i class="fas fa-chart-pie"></i>
             <h3>Streamline Operations</h3>
             <p>Reduce operational bottlenecks by delegating routine financial and administrative tasks to our dedicated virtual assistants.</p>
         </div>
-        <div class="va-benefit">
+        <div class="va-benefit abt-timeline-item">
             <i class="fas fa-hand-holding-usd"></i>
             <h3>Financial Expertise</h3>
             <p>Our VAs are well-versed in the nuances of financial management, ensuring your practice runs smoothly and in compliance with industry standards.</p>
         </div>
-        <div class="va-benefit">
+        <div class="va-benefit abt-timeline-item">
             <i class="fas fa-balance-scale"></i>
             <h3>Ensure Compliance</h3>
             <p>Our assistants stay updated on regulatory requirements and assist in ensuring your operations remain compliant with financial laws and regulations.</p>
         </div>
-        <div class="va-benefit">
+        <div class="va-benefit abt-timeline-item">
             <i class="fas fa-cogs"></i>
             <h3>Scalable Solutions</h3>
             <p>As your firm grows, so do our services. We offer scalable solutions that adapt to the needs of your expanding client base and operational demands.</p>
@@ -238,7 +238,7 @@ $(document).ready(function(){
 </section>
 
 <!-- Services Offered Section -->
-<section class="va-services">
+<section class="va-services abt-timeline-item">
     <h2>Tailored Services for Finance Professionals</h2>
     <ul>
         <li><i class="fas fa-file-invoice-dollar"></i> <strong>Accounting & Bookkeeping:</strong> Our assistants manage your ledgers, invoicing, payroll processing, and reconciliations with impeccable accuracy.</li>
@@ -252,7 +252,7 @@ $(document).ready(function(){
 
 
 <!-- Testimonials Section -->
-<section class="va-testimonials">
+<section class="va-testimonials abt-timeline-item">
     <h2>Client Testimonials</h2>
     <div class="va-testimonial">
         <p><i class="fas fa-quote-left"></i> WorkZen has become an integral part of our financial advisory firm. From managing client portfolios to preparing compliance reports, their VAs handle it all with exceptional precision. <i class="fas fa-quote-right"></i></p>
@@ -265,7 +265,7 @@ $(document).ready(function(){
 </section>
 
 <!-- FAQ Section -->
-<section class="va-faq">
+<section class="va-faq abt-timeline-item">
     <h2>Frequently Asked Questions</h2>
     <div class="va-faq-item">
         <h3 class="faq-question">
@@ -274,28 +274,28 @@ $(document).ready(function(){
         </h3>
         <p class="faq-answer">Our VAs are trained in data security protocols and adhere to strict confidentiality agreements, ensuring that your financial data remains secure and private.</p>
     </div>
-    <div class="va-faq-item">
+    <div class="va-faq-item abt-timeline-item">
         <h3 class="faq-question">
             2. Can your VAs handle complex financial tasks like portfolio management?
             <i class="fas fa-chevron-down"></i>
         </h3>
         <p class="faq-answer">Yes, we have experienced virtual assistants skilled in managing portfolios, tracking investment performance, and generating detailed financial reports.</p>
     </div>
-    <div class="va-faq-item">
+    <div class="va-faq-item abt-timeline-item">
         <h3 class="faq-question">
             3. Can I hire a virtual assistant for specific tasks only?
             <i class="fas fa-chevron-down"></i>
         </h3>
         <p class="faq-answer">Absolutely! You can choose the specific services you need, from client communication to financial reporting, and scale as necessary.</p>
     </div>
-    <div class="va-faq-item">
+    <div class="va-faq-item abt-timeline-item">
         <h3 class="faq-question">
             4. How do you ensure compliance with financial regulations?
             <i class="fas fa-chevron-down"></i>
         </h3>
         <p class="faq-answer">Our VAs are trained to stay updated on industry regulations and ensure that all processes follow the legal and compliance standards required for financial institutions.</p>
     </div>
-    <div class="va-faq-item">
+    <div class="va-faq-item abt-timeline-item">
         <h3 class="faq-question">
             5. How can I get started with a virtual assistant for my finance firm?
             <i class="fas fa-chevron-down"></i>
@@ -303,6 +303,26 @@ $(document).ready(function(){
         <p class="faq-answer">We offer a free consultation to assess your firm’s needs and match you with the most qualified virtual assistant. From there, we onboard the VA into your business processes seamlessly.</p>
     </div>
 </section>
+<script>
+      document.addEventListener('DOMContentLoaded', () => {
+    const timelineItems = document.querySelectorAll('.abt-timeline-item');
+
+    const revealTimeline = () => {
+        timelineItems.forEach(item => {
+            const itemPosition = item.getBoundingClientRect().top;
+            const screenPosition = window.innerHeight / 1.2;
+
+            if (itemPosition < screenPosition) {
+                item.classList.add('show');
+            }
+        });
+    };
+
+    window.addEventListener('scroll', revealTimeline);
+    revealTimeline();  // Trigger on load for any visible items
+});
+
+</script>
 
 <script>
     document.querySelectorAll('.va-faq-item').forEach(item => {

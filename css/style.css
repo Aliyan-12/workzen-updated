@@ -1161,6 +1161,9 @@
 
 /* Header Section */
 /* Header Section */
+/* Initial opacity and translation for scroll animations */
+
+
 .va-header {
     background-color: #f4f4f4;
     padding: 80px 20px;
@@ -1910,8 +1913,22 @@
 }
 /***pricing end ***/
 /***why us start ***/
+/* Scroll Fade-in Animation */
+/* Timeline Item (Slide in animation) */
+.abt-timeline-item {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.abt-timeline-item.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
 header.why-workzen-header {
-    background: #fb731c; /* Bright Orange */
+   
     color: #fff;
     text-align: center;
     padding: 60px 20px;
@@ -2258,7 +2275,7 @@ input[type="submit"] {
     left: 9px;
     width: 2px;
     height: 100%;
-    background: #ff8000;
+    /* background: #ff8000; */
     top: 0;
 }
 

@@ -189,7 +189,7 @@ $(document).ready(function(){
 
 <!-- industries Start -->
 <header class="va-header">
-    <div class="va-header-container">
+    <div class="va-header-container abt-timeline-item">
         <!-- Left: Text Content -->
         <div class="va-header-text">
             <h1>Transform Your Real Estate Business with Virtual Assistants</h1>
@@ -211,24 +211,24 @@ $(document).ready(function(){
 </header>
 
 <section class="va-why-choose-us">
-    <h2>Why Choose Our Real Estate Virtual Assistants?</h2>
+    <h2 class="abt-timeline-item">Why Choose Our Real Estate Virtual Assistants?</h2>
     <div class="va-benefits">
-        <div class="va-benefit">
+        <div class="va-benefit abt-timeline-item">
             <i class="fas fa-clock"></i>
             <h3>Free Up Your Time</h3>
             <p>Delegate routine tasks like property listings, email responses, and lead follow-ups with precision.</p>
         </div>
-        <div class="va-benefit">
+        <div class="va-benefit abt-timeline-item">
             <i class="fas fa-user-tie"></i>
             <h3>Experienced Real Estate Professionals</h3>
             <p>Our virtual assistants are skilled in real estate-specific tasks, ensuring you get industry expertise tailored to your needs.</p>
         </div>
-        <div class="va-benefit">
+        <div class="va-benefit abt-timeline-item">
             <i class="fas fa-wallet"></i>
             <h3>Cost-Effective Solutions</h3>
             <p>Enhance your team’s capabilities without the overhead costs of hiring full-time staff.</p>
         </div>
-        <div class="va-benefit">
+        <div class="va-benefit abt-timeline-item">
             <i class="fas fa-chart-line"></i>
             <h3>Flexible & Scalable</h3>
             <p>Grow your business at your own pace by scaling our services as your portfolio expands.</p>
@@ -237,8 +237,8 @@ $(document).ready(function(){
 </section>
 
 <section class="va-services">
-    <h2>Customized Services for Real Estate Professionals</h2>
-    <ul>
+    <h2 class="abt-timeline-item">Customized Services for Real Estate Professionals</h2>
+    <ul class="abt-timeline-item">
         <li><i class="fas fa-home"></i> <strong>Property Management:</strong> Our assistants handle tenant communications, maintenance requests, and scheduling property tours.</li>
         <li><i class="fas fa-envelope"></i> <strong>Lead Management:</strong> Our VAs manage incoming leads, schedule showings, and follow up with prospective buyers.</li>
         <li><i class="fas fa-tasks"></i> <strong>Administrative Support:</strong> Document preparation, CRM management, and other tasks that keep your real estate business running smoothly.</li>
@@ -249,48 +249,48 @@ $(document).ready(function(){
 </section>
 
 <section class="va-testimonials">
-    <h2>What Our Real Estate Clients Say</h2>
-    <div class="va-testimonial">
+    <h2 class="abt-timeline-item">What Our Real Estate Clients Say</h2>
+    <div class="va-testimonial abt-timeline-item">
         <p><i class="fas fa-quote-left"></i> Working with a virtual assistant has streamlined our operations. Our agents can now focus more on client relationships. <i class="fas fa-quote-right"></i></p>
         <span>— Michael S., Real Estate Broker</span>
     </div>
-    <div class="va-testimonial">
+    <div class="va-testimonial abt-timeline-item">
         <p><i class="fas fa-quote-left"></i> Our virtual assistant has become indispensable. From managing listings to client follow-ups, they’ve freed up my time to close more deals. <i class="fas fa-quote-right"></i></p>
         <span>— Karen T., Luxury Real Estate Agent</span>
     </div>
 </section>
 
 <section class="va-faq">
-    <h2>Frequently Asked Questions</h2>
-    <div class="va-faq-item">
+    <h2 class="abt-timeline-item">Frequently Asked Questions</h2>
+    <div class="va-faq-item abt-timeline-item">
         <h3 class="faq-question">
             1. How does the onboarding process work?
             <i class="fas fa-chevron-down"></i>
         </h3>
         <p class="faq-answer">We start with an in-depth consultation to understand your real estate business needs and match you with a qualified assistant.</p>
     </div>
-    <div class="va-faq-item">
+    <div class="va-faq-item abt-timeline-item">
         <h3 class="faq-question">
             2. Can I hire a virtual assistant for just a few hours a week?
             <i class="fas fa-chevron-down"></i>
         </h3>
         <p class="faq-answer">Yes! We offer flexible plans to match your current workload and can scale as your business grows.</p>
     </div>
-    <div class="va-faq-item">
+    <div class="va-faq-item abt-timeline-item">
         <h3 class="faq-question">
             3. What if I’m not satisfied with the virtual assistant?
             <i class="fas fa-chevron-down"></i>
         </h3>
         <p class="faq-answer">We offer a satisfaction guarantee and can quickly provide a replacement to meet your expectations.</p>
     </div>
-    <div class="va-faq-item">
+    <div class="va-faq-item abt-timeline-item">
         <h3 class="faq-question">
             4. Will my virtual assistant be familiar with the tools my agency uses?
             <i class="fas fa-chevron-down"></i>
         </h3>
         <p class="faq-answer">Our assistants are experienced with industry-leading tools such as MLS, Zillow, and CRM platforms. We also provide additional training for any specific software you use.</p>
     </div>
-    <div class="va-faq-item">
+    <div class="va-faq-item abt-timeline-item">
         <h3 class="faq-question">
             5. How do you ensure data security and confidentiality?
             <i class="fas fa-chevron-down"></i>
@@ -298,6 +298,26 @@ $(document).ready(function(){
         <p class="faq-answer">We adhere to strict data protection policies, with NDAs signed by all assistants, ensuring your client and business information remains confidential.</p>
     </div>
 </section>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const timelineItems = document.querySelectorAll('.abt-timeline-item');
+
+    const revealTimeline = () => {
+        timelineItems.forEach(item => {
+            const itemPosition = item.getBoundingClientRect().top;
+            const screenPosition = window.innerHeight / 1.2;
+
+            if (itemPosition < screenPosition) {
+                item.classList.add('show');
+            }
+        });
+    };
+
+    window.addEventListener('scroll', revealTimeline);
+    revealTimeline();  // Trigger on load for any visible items
+});
+
+</script>
 
 <script>
 document.querySelectorAll('.va-faq-item').forEach(item => {
