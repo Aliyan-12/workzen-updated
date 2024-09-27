@@ -1694,6 +1694,9 @@
 /*** help end  ***/
 
 /*** Pricing start  ***/
+.pricing-txt{
+    text-align: center;
+}
 .section-header-pricing h2{
     text-align: center
     
