@@ -1661,6 +1661,20 @@
   .whatsapp-chat img:hover {
     transform: scale(1.1);
   }
+  @media screen and (max-width: 600px) {
+    .whatsapp-chat {
+        bottom: 15px;
+        left: 15px;
+    }
+
+    .whatsapp-chat img {
+        height: 60px;  /* Smaller size for mobile */
+    }
+
+    .whatsapp-chat img:hover {
+        transform: scale(1.05); /* Reduced hover effect for smaller screens */
+    }
+}
   
   /* Tooltip text */
   .tooltip-text {
@@ -2356,3 +2370,105 @@ input[type="submit"] {
 
 
 /* abt us */
+/* help link */
+.workzen-header {
+  
+    color: white;
+    text-align: center;
+    padding-top: 30px;
+    font-size: 1.8rem;
+}
+
+.workzen-header h1 {
+    margin: 0;
+}
+
+/* Container Styling */
+.workzen-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Section Headers */
+.workzen-container h2 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+/* Terms of Use, Privacy Policy, Help & FAQs Styling */
+.workzen-terms-of-use,
+.workzen-privacy-policy,
+.workzen-help,
+.workzen-faqs {
+    margin-bottom: 40px;
+}
+
+.workzen-terms-of-use ul,
+.workzen-privacy-policy ul,
+.workzen-help ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.workzen-terms-of-use li,
+.workzen-privacy-policy li,
+.workzen-help li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.workzen-terms-of-use li::before,
+.workzen-privacy-policy li::before,
+.workzen-help li::before {
+    content: '•';
+    color: #007bff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.2rem;
+}
+
+/* FAQ Section Styling */
+.workzen-faq-item {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #f1f1f1;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.workzen-faq-item h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.workzen-faq-item p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Links */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Footer for padding */
+footer {
+    padding: 40px;
+    text-align: center;
+    background-color: #343a40;
+    color: white;
+    font-size: 0.9rem;
+}
+/* helplikn */
