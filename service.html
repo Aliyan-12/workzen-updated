@@ -259,6 +259,188 @@
                         </div>
                     </div>
                 </div>
+                <header class="social-header">
+                    <h1>Comprehensive Social Media Services</h1>
+                  
+                </header>
+            
+                <section class="social-services">
+                    <div class="social-service-section">
+                        <button class="social-dropdown-btn"> 
+                            <i class="fab fa-facebook-square"></i> Facebook Services <i class="fas fa-chevron-down"></i>
+                        </button>
+                        
+                        <div class="social-dropdown-content">
+                            <div class="left">
+                            <ul>
+                                <li><i class="fas fa-bullhorn"></i> Ad Management
+                                    <ul>
+                                        <li>Campaign Creation and Targeting</li>
+                                        <li>Budget Optimization</li>
+                                       
+                                        <li>Audience Retargeting</li>
+                                        <li>Ad Insights and Reporting</li>
+                                    </ul>
+                                </li>
+                                <li><i class="fas fa-tools"></i> Page Management
+                                    <ul>
+                                        <li>Content Scheduling and Publishing</li>
+                                        <li>Automated Messaging</li>
+                                        <li>Engagement Tracking</li>
+                                        <li>Event Management</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="right-fb">
+                          <img src="img/fb-ad.png" alt="">
+                        </div>
+                           
+                        </div>
+                    </div>
+            
+                    <div class="social-service-section">
+                        <button class="social-dropdown-btn"> 
+                            <i class="fab fa-instagram"></i> Instagram Services <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="social-dropdown-content">
+                            <div class="left">
+                            <ul>
+                                <li><i class="fas fa-bullhorn"></i> Ad Management
+                                    <ul>
+                                        <li>Instagram Stories and Feed Ads</li>
+                                        <li>Influencer Marketing Integration</li>
+                                        <li>Custom Target Audiences</li>
+                                    </ul>
+                                </li>
+                                <li><i class="fas fa-photo-video"></i> Content Management
+                                    <ul>
+                                        <li>Grid Aesthetic Planning</li>
+                                        <li>Post and Story Scheduling</li>
+                                        <li>Hashtag Optimization</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="right-insta">
+                            <img src="img/insta-ad.png" alt="">
+                        </div>
+                          
+                    </div>
+            
+                    <div class="social-service-section">
+                        <button class="social-dropdown-btn"> 
+                            <i class="fab fa-linkedin"></i> LinkedIn Services <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="social-dropdown-content">
+                            <div class="lef">
+                            <ul>
+                                <li><i class="fas fa-ad"></i> Ad Campaigns
+                                    <ul>
+                                        <li>Sponsored InMail Ads</li>
+                                        <li>Lead Generation Forms</li>
+                                        <li>B2B Targeting Optimization</li>
+                                    </ul>
+                                </li>
+                                <li><i class="fas fa-building"></i> Company Page Management
+                                    <ul>
+                                        <li>Article Publishing and Employee Advocacy</li>
+                                        <li>Community Engagement Metrics</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="right-linkdin">
+            <img src="img/linkdin-ad.png" alt="">
+                        </div>
+                    </div>
+            
+                    <div class="social-service-section">
+                        <button class="social-dropdown-btn"> 
+                            <i class="fab fa-twitter"></i> Twitter Services <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="social-dropdown-content">
+                            <div class="left">
+            
+                            
+                            <ul>
+                                <li><i class="fas fa-ad"></i> Twitter Ads
+                                    <ul>
+                                        <li>Promoted Tweets and Accounts</li>
+                                        <li>Audience Engagement Insights</li>
+                                    </ul>
+                                </li>
+                                <li><i class="fas fa-calendar-alt"></i> Content Scheduling
+                                    <ul>
+                                        <li>Hashtag and Trend Monitoring</li>
+                                        <li>Real-time Campaign Monitoring</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="right-x">
+                            <img src="img/twitter-ad.png" alt="">
+                        </div>
+                    </div>
+            
+                   <div class="social-service-section">
+                <button class="social-dropdown-btn"> 
+                    <i class="fab fa-tiktok"></i> TikTok Services <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="social-dropdown-content">
+            <div class="left">
+                    <ul>
+                        <li><i class="fas fa-video"></i> Ad Campaigns
+                            <ul>
+                                <li>TikTok Video Ads</li>
+                                <li>Content Virality Metrics</li>
+                                <li>Brand Takeover Ads</li>
+                                <li>In-Feed Native Ads</li>
+                                <li>Hashtag Challenge Ads</li>
+                            </ul>
+                        </li>
+                        <li><i class="fas fa-photo-video"></i> Content Management
+                            <ul>
+                                <li>Scheduled Posting</li>
+                                <li>Hashtag Optimization</li>
+                                <li>Collaborating with Influencers</li>
+                                <li>Music and Sound Integration</li>
+                            </ul>
+                        </li>
+                      
+                        </ul>
+                    </div>
+                    <div class="right-tiktok">
+                        <img src="img/tiktok-ad.png" alt="">
+                    </div>
+                </div>
+            </div>
+            
+                </section>
+            
+               <script>
+           
+            document.addEventListener('DOMContentLoaded', function () {
+                var dropdowns = document.querySelectorAll('.social-dropdown-btn');
+            
+                dropdowns.forEach(function (dropdown) {
+                    dropdown.addEventListener('click', function () {
+                        this.classList.toggle('active');
+                        var content = this.nextElementSibling;
+            
+                        if (content.style.maxHeight) {
+                            content.style.maxHeight = null;
+                            content.style.padding = '0 20px';
+                        } else {
+                            content.style.maxHeight = content.scrollHeight + 'px';
+                            content.style.padding = '15px 20px';
+                        }
+                    });
+                });
+            });
+            
+               </script>
+            
             </div>
         </div>
         <!-- Services End -->

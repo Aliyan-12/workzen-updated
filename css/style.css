@@ -2008,7 +2008,7 @@ header.why-workzen-header {
 }
 
 section {
-    padding: 60px 20px;
+    /* padding: 60px 20px; */
     max-width: 1200px;
     margin: auto;
 }
@@ -2553,3 +2553,172 @@ footer {
 
 /* blog */
 
+/* services dropdown */
+
+
+/* Header */
+.social-header {
+  
+    color: #fb731c;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .social-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .social-header p {
+    font-size: 1.1rem;
+  }
+  
+  /* Services Section */
+  .social-services {
+    margin: 20px auto;
+    max-width: 1200px;
+  }
+  
+  .social-service-section {
+    margin: 20px 0;
+  }
+  .right-fb img {
+    height: 400px;
+    margin-left: 275px;
+    margin-top: 45px;
+  }
+  .right-insta img {
+    height: 350px;
+    margin-left: 275px;
+    margin-top: 80px;
+    
+  }
+  .right-x img {
+    height: 350px;
+    margin-left: 275px;
+    margin-top: 50px;
+    
+  }
+  .right-linkdin img {
+    height: 280px;
+    margin-left: 180px;
+    margin-top: 80px;
+    
+  }
+  .right-tiktok img {
+    height: 320px;
+    margin-left: 280px;
+    margin-top: 80px;
+  }
+  /* Dropdown Button Styling */
+  .social-dropdown-btn {
+    background-color: #fb731c;
+    color: white;
+    padding: 15px;
+    width: 100%;
+    border: none;
+    font-size: 1.5rem;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+  }
+  
+  .social-dropdown-btn i {
+    margin-right: 10px;
+  }
+  
+  .social-dropdown-btn:hover {
+    background-color: #e0691a;
+  }
+  
+  .social-dropdown-btn .fas {
+    transition: transform 0.4s ease;
+  }
+  
+  .social-dropdown-btn.active .fas.fa-chevron-down {
+    transform: rotate(180deg);
+  }
+  
+  /* Dropdown Content */
+  .social-dropdown-content {
+    display: flex;
+    background-color: white;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+    padding: 0 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 5px;
+    border-radius: 5px;
+  }
+  
+  /* Dropdown Inner List */
+  .social-dropdown-content ul {
+    list-style-type: none;
+    padding: 15px 0;
+  
+  
+  }
+  
+  .social-dropdown-content ul li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #444;
+    
+    align-items: center;
+    padding: 5px 0;
+  }
+  
+  .social-dropdown-content ul li i {
+    margin-right: 10px;
+    color: #fb731c;
+  }
+  
+  .social-dropdown-content ul li ul {
+    padding-left: 30px;
+    list-style-type: disc;
+  }
+  
+  /* Adjusted Icon and Text Alignment */
+  .social-dropdown-content ul li i {
+    font-size: 1.5rem;
+    display: inline-block;
+    width: 30px;
+  }
+  
+  .social-dropdown-content ul li ul li {
+    padding-left: 10px;
+  }
+  
+/* Media Query for Responsive Design */
+@media (max-width: 768px) {
+    /* Remove images on smaller screens */
+    .right-fb img,
+    .right-insta img,
+    .right-x img,
+    .right-linkdin img,
+    .right-tiktok img {
+        display: none;
+    }
+
+    /* Adjust dropdown button font size */
+    .social-dropdown-btn {
+        font-size: 1.2rem;
+        padding: 10px;
+    }
+
+    /* Adjust the header text size */
+    .social-header h1 {
+        font-size: 2rem;
+    }
+
+    .social-header p {
+        font-size: 1rem;
+    }
+}
+  
+/* services dropdown */
