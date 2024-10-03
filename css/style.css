@@ -2610,6 +2610,37 @@ footer {
     margin-left: 280px;
     margin-top: 80px;
   }
+  .right-crm img {
+    height: 306px;
+    margin-left: 259px;
+    margin-top: 126px;
+  }
+  .right-software img {
+    height: 373px;
+    margin-left: 78px;
+    margin-top: 2px;
+  }
+  .right-seo img {
+    height: 350px;
+    margin-left: 21px;
+    margin-top: 21px;
+  }
+  .right-branding img {
+    height: 372px;
+    margin-left: 206px;
+    margin-top: 1px;
+  }
+  .right-budget img {
+    height: 230px;
+    margin-left: 107px;
+    margin-top: 125px;
+  }
+ .right-financial img {
+    height: 274px;
+    margin-top: 97px;
+ }
+
+
   /* Dropdown Button Styling */
   .social-dropdown-btn {
     background-color: #fb731c;
@@ -2701,7 +2732,7 @@ footer {
     .right-insta img,
     .right-x img,
     .right-linkdin img,
-    .right-tiktok img {
+    .right-tiktok img, .right-branding img, .right-budget img, .right-crm img, .right-financial img, .right-seo img, .right-software img {
         display: none;
     }
 
