@@ -194,7 +194,73 @@ $(document).ready(function(){
 
     </script>
         <!-- Fact End -->
-
+        <div class="container-fluid py-5 mb-5 team">
+            <div class="container">
+                <div class="text-center mx-auto pb-5 wow fadeIn" data-wow-delay=".3s" style="max-width: 600px;">
+                    <h5 class="text-primary">workZen</h5>
+                    <h1>Makes You Hire Your Favorite Virtual Assistan Easier in 3 Steps.</h1>
+                </div>
+    
+              
+                
+                <div class="abt-timeline-section">
+                    <div class="abt-timeline-container">
+                        <div class="abt-timeline-item">
+                            <div class="abt-timeline-shape"></div>
+                            <div class="abt-timeline-content">
+                                <h3>Book A Meeting</h3>
+                                <p>Go to <a class="steps" href="demo.html">book a meeting</a> on top right corner.</p>
+                            </div>
+                        </div>
+                
+                        <div class="abt-timeline-item">
+                            <div class="abt-timeline-shape"></div>
+                            <div class="abt-timeline-content">
+                                <h3>Fill The Form</h3>
+                                <p>Fill the required fields and schedule a meeting.</p>
+                            </div>
+                        </div>
+                
+                        <div class="abt-timeline-item">
+                            <div class="abt-timeline-shape"></div>
+                            <div class="abt-timeline-content">
+                                <h3>Choose Your VA</h3>
+                                <p> Dive into a short meeting with your favorite VA.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-img"><img  src="img/step.png" alt="steps"></div>
+                </div>
+            
+    
+                
+                <script>
+          document.addEventListener('DOMContentLoaded', () => {
+        const timelineItems = document.querySelectorAll('.abt-timeline-item');
+    
+        const revealTimeline = () => {
+            timelineItems.forEach(item => {
+                const itemPosition = item.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.2;
+    
+                if (itemPosition < screenPosition) {
+                    item.style.opacity = "1";
+                    item.style.transform = "translateX(0)";
+                } else {
+                    item.style.opacity = "0";
+                    item.style.transform = "translateX(-50px)";
+                }
+            });
+        };
+    
+        window.addEventListener('scroll', revealTimeline);
+        revealTimeline();
+    });
+    </script>
+    
+    
+            </div>
+        </div>
 <!-- why us Start -->
 <header class="why-workzen-header">
     <div class="why-workzen-header-container abt-timeline-item">
