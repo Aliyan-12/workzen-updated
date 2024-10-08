@@ -2882,33 +2882,11 @@ footer {
           flex-basis: 100%;
         }
       }
-
-      h1, h2, h3 {
-        color: #fb731c;
-        text-align: center;
-      }
+.about-box{
+    text-align: center;
+}
+.about-section{
+    text-align: center;
+}     
   
-      h1 {
-        font-size: 3rem;
-        margin-bottom: 20px;
-        text-transform: uppercase;
-        letter-spacing: 3px;
-      }
-  
-      h2 {
-        font-size: 2.2rem;
-        margin-bottom: 10px;
-        text-transform: capitalize;
-      }
-  
-      h3 {
-        font-size: 1.8rem;
-        margin-bottom: 15px;
-      }
-  
-      p {
-        
-        font-size: 1.1rem;
-        color: #555;
-      }
-  
+     
