@@ -1973,10 +1973,56 @@
     
 }
 /***pricing end ***/
-/***why us start ***/
-/* Scroll Fade-in Animation */
-/* Timeline Item (Slide in animation) */
-.abt-timeline-item {
+ /* why us  */
+ .tilted-strip {
+    position: relative;
+    /* width: 120%; */
+    height: 60px;
+    background-color: orange;
+    transform: rotate(-5deg);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .scrolling-text {
+    white-space: nowrap;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    animation: scrollText 10s linear infinite;
+  }
+  
+  @keyframes scrollText {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  @media (max-width: 768px) {
+    .tilted-strip {
+      height: 50px; /* Reduce height on smaller screens */
+    }
+  
+    .scrolling-text {
+      font-size: 16px; /* Adjust font size */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .tilted-strip {
+      height: 40px; /* Further reduce height */
+      transform: rotate(-3deg); /* Slightly less tilt for better readability */
+    }
+  
+    .scrolling-text {
+      font-size: 14px; /* Smaller font size for narrow screens */
+    }
+  }
+  
+ .abt-timeline-item {
     opacity: 0;
     transform: translateX(-50px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
@@ -2256,6 +2302,10 @@ h2 {
     }
 }
 /***why su end ***/
+ 
+ /* why us end  */
+
+
 /***contact us ***/
 
 input[type="submit"] {
