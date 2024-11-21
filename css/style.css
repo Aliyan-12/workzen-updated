@@ -1978,7 +1978,7 @@
     position: relative;
     /* width: 120%; */
     height: 60px;
-    background-color: orange;
+    background-color: #ff9350;
     transform: rotate(-5deg);
     display: flex;
     align-items: center;
