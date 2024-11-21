@@ -1028,6 +1028,7 @@
 
 
 /*** Testimonial Start ***/
+
 .youtube-video-section {
     display: flex;
     justify-content: center;
@@ -1042,8 +1043,6 @@
     border-radius: 8px;
   }
   
-
-
 /* Testimonial Item Styling */
 .testimonial-item {
     background: #ffffff; /* Clean white background */
@@ -1993,7 +1992,7 @@
     position: relative;
     /* width: 120%; */
     height: 60px;
-    background-color: orange;
+    background-color: #ff9350;
     transform: rotate(-5deg);
     display: flex;
     align-items: center;
@@ -2955,20 +2954,7 @@ footer {
 }     
   
      /* testimonial video */
-/*      
-     .youtube-video-section {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 20px 0;
-        background:  linear-gradient(to left, #fb731c, #ff9350);
-        padding: 10px;
-        border-radius: 8px;
-      }
-      
-      .youtube-video-section iframe {
-        border-radius: 8px;
-      }
-       */
+     
+    
 
      /* testimonial video */
