@@ -1028,7 +1028,9 @@
 
 
 /*** Testimonial Start ***/
-
+.abdiel{
+    height: 120px;
+}
 .youtube-video-section {
     display: flex;
     justify-content: center;
