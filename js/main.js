@@ -106,3 +106,60 @@
 
 
 })(jQuery);
+
+// snow animation
+
+function createSnowflakes(container, num) {
+    for (let i = 0; i < num; i++) {
+      const snowflake = document.createElement('div');
+      snowflake.classList.add('snowflake');
+  
+      // Set random size
+      const size = Math.random() * 20 + 10; // size between 10px to 30px
+      snowflake.style.fontSize = `${size}px`;
+  
+      // Set random position
+      const leftPosition = Math.random() * 100; // random horizontal position
+      snowflake.style.left = `${leftPosition}vw`;
+  
+      // Set random animation duration
+      const speed = Math.random() * 10 + 5; // speed between 5s to 15s
+      snowflake.style.animationDuration = `${speed}s`;
+  
+      // Set random horizontal movement
+      const horizontalMovement = (Math.random() - 0.5) * 50; // random horizontal movement
+      snowflake.style.transform = `translateX(${horizontalMovement}px)`;
+  
+      // Set the snowflake character
+      snowflake.innerHTML = '&#10052;';
+  
+      // Set random color for the snowflake
+      snowflake.style.color = `hsl(${Math.random() * 360}, 100%, 100%)`; // Random color in HSL range
+  
+      container.appendChild(snowflake);
+  
+      // Remove snowflakes after it falls
+      snowflake.addEventListener('animationend', () => {
+        snowflake.remove();
+      });
+    }
+  }
+  
+  function initializeSnowEffect() {
+    const snowContainers = document.querySelectorAll('.snow-container');
+    snowContainers.forEach(container => {
+      const amountSnow = 20; // initial snow amount
+      createSnowflakes(container, amountSnow);
+  
+      // Create new snowflakes periodically
+      setInterval(() => {
+        createSnowflakes(container, 1);
+      }, 2000);
+    });
+  }
+  
+  // Initialize the snow effect when the DOM is fully loaded
+  document.addEventListener('DOMContentLoaded', initializeSnowEffect);
+  
+
+

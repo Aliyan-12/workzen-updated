@@ -3203,3 +3203,18 @@ footer {
     
       /* popup tg */
       
+    
+    
+    .snowflake {
+        position: absolute;
+        top: -50px;
+        opacity: 0.8;
+        pointer-events: none;
+        animation: fall linear infinite;
+    }
+    
+    @keyframes fall {
+        to {
+            transform: translateY(150vh);
+        }
+    }
