@@ -3050,19 +3050,44 @@ footer {
       
     
       /* popup tg */
-      
+
+      /*chrismas  */
+      .chrismas {
+        background-color: #0a192f;
+     
+height: 100px;
+      }
+    .title {
+        
+	
+	font-family: "Mountains of Christmas", cursive;
+	font-size: 5em;
+	text-align: center;
+	color: #ff6f61;
+	text-shadow: 0 0 7px #ff6f61, 0 0 10px #ff6f61, 0 0 21px #ff6f61,
+		0 0 42px #ff0040, 0 0 82px #ff0040, 0 0 92px #ff0040, 0 0 102px #ff0040,
+		0 0 151px #ff0040;
+	
+	letter-spacing: 5px;
+	font-weight: bold;
+	opacity: 0;
+	animation: fadeIn 2s forwards, scaleUp 2s forwards, textGlow 2s forwards,
+		christmasColors 4s infinite;
+}
+
+@keyframes christmasColors {
+	0%,
+	100% {
+		color: #ff6f61;
+	}
+	25% {
+		color: #ffcc00;
+	}
+	50% {
+		color: #00cc99;
+	}
+	75% {
+		color: #ff6f61;
+	}
+}
     
-    
-    .snowflake {
-        position: absolute;
-        top: -50px;
-        opacity: 0.8;
-        pointer-events: none;
-        animation: fall linear infinite;
-    }
-    
-    @keyframes fall {
-        to {
-            transform: translateY(150vh);
-        }
-    }
