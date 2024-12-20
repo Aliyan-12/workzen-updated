@@ -2958,158 +2958,6 @@ footer {
     text-align: center;
 }     
 
-      /* thanks giving */
-  
-  .content {
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    overflow: hidden;
-    background-color: #FFE082;
-  }
-  
-  .hello {
-    text-align: center;
-    font-size:80px;
-    font-weight: bold;
-    font-family: Roboto, sans-serif;
-    color: #fb731c;
-    text-shadow: 1px 1px #370617;
-  }
-  
-  .leaves {
-    position: absolute;
-  }
-  
-  .turkey1 {
-    position: absolute;
-    font-size: 100px;
-    top:0;
-    animation: fall 5s linear infinite;
-  }
-  
-  .leaf2 {
-    position: absolute;
-    font-size: 70px;
-    top:0;
-    animation: fall2 6s linear infinite;
-  }
-  
-  .deadleaf3 {
-    position: absolute;
-    font-size: 40px;
-    top:-400px;
-    left:-100px;
-    animation: fall 4s linear infinite 1s;
-  }
-  
-  .pie4 {
-    position: absolute;
-    font-size: 90px;
-    top:-400px;
-    left:300px;
-    animation: fall2 4s linear infinite 1.5s;
-  }
-  
-  .leaf5 {
-    position: absolute;
-    font-size: 55px;
-    top:-410px;
-    left:250px;
-    animation: fall3 4s linear infinite 2s;
-  }
-  
-  @keyframes fall {
-    0% {top:-410px; transform: translateX(-100px) rotateX(180deg);}
-    100% {top:400px; transform: translateX(250px) rotateX(-180deg);}
-  }
-  
-  @keyframes fall2 {
-    0% {top:-410px; transform: translateX(50px) rotateX(-90deg);}
-    100% {top:400px; transform: translateX(-350px) rotateX(180deg);}
-  }
-  
-  @keyframes fall3 {
-    0% {top:-430px; transform: translateX(0px) rotateX(-180deg);}
-    100% {top:400px; transform: translateX(-400px) rotateX(180deg);}
-  }
-  
-  @keyframes fall4 {
-    0% {top:-430px; transform: translateX(0px) rotateY(-180deg);}
-    100% {top:400px; transform: translateX(-400px) rotateY(180deg);}
-  }
-  
-  @keyframes fall5 {
-    0% {top:-410px; transform: translateX(-100px) rotateY(180deg);}
-    100% {top:400px; transform: translateX(250px) rotateY(-180deg);}
-  }
-  
-  .turkey6 {
-    position: absolute;
-    font-size: 55px;
-    top:-410px;
-    left:-250px;
-    animation: fall3 4s linear infinite 1.5s;
-  }
-  
-  .leaf7 {
-    position: absolute;
-    font-size: 35px;
-    top:-410px;
-    left:-350px;
-    animation: fall2 5s linear infinite .5s;
-  }
-  
-  .corn8 {
-    position: absolute;
-    font-size: 75px;
-    top:-430px;
-    left:550px;
-    animation: fall3 5s linear infinite .5s;
-  }
-  
-  .carrot9 {
-    position: absolute;
-    font-size: 50px;
-    top:-430px;
-    left:150px;
-    animation: fall4 6s linear infinite .3s;
-  }
-  
-  .potato10 {
-    position: absolute;
-    font-size: 55px;
-    top:-430px;
-    left:450px;
-    animation: fall5 3.7s linear infinite 1.3s;
-  }
-  
-  .leaf11 {
-    position: absolute;
-    font-size: 55px;
-    top:-430px;
-    left:650px;
-    animation: fall5 4.7s linear infinite 1.7s;
-  }
-
-  @media (max-width: 768px) {
-    .hello {
-      font-size: 6vw;
-    }
-    .turkey1, .leaf2, .deadleaf3, .pie4, .leaf5, .turkey6, .leaf7, .corn8, .carrot9, .potato10, .leaf11 {
-      font-size: 4vw;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .hello {
-      font-size: 5vw;
-    }
-    .turkey1, .leaf2, .deadleaf3, .pie4, .leaf5, .turkey6, .leaf7, .corn8, .carrot9, .potato10, .leaf11 {
-      font-size: 3vw;
-    }
-  }
 
     
       /* popup tg */
@@ -3202,4 +3050,44 @@ footer {
       
     
       /* popup tg */
-      
+
+      /*chrismas  */
+      .chrismas {
+        background-color: #0a192f;
+     
+height: 100px;
+      }
+    .title {
+        
+	
+	font-family: "Mountains of Christmas", cursive;
+	font-size: 5em;
+	text-align: center;
+	color: #ff6f61;
+	text-shadow: 0 0 7px #ff6f61, 0 0 10px #ff6f61, 0 0 21px #ff6f61,
+		0 0 42px #ff0040, 0 0 82px #ff0040, 0 0 92px #ff0040, 0 0 102px #ff0040,
+		0 0 151px #ff0040;
+	
+	letter-spacing: 5px;
+	font-weight: bold;
+	opacity: 0;
+	animation: fadeIn 2s forwards, scaleUp 2s forwards, textGlow 2s forwards,
+		christmasColors 4s infinite;
+}
+
+@keyframes christmasColors {
+	0%,
+	100% {
+		color: #ff6f61;
+	}
+	25% {
+		color: #ffcc00;
+	}
+	50% {
+		color: #00cc99;
+	}
+	75% {
+		color: #ff6f61;
+	}
+}
+    
